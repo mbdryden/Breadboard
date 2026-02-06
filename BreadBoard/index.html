@@ -215,9 +215,15 @@
 
     firebase.initializeApp(firebaseConfig);
 
-    // Predefined login credentials (can be replaced with your logic)
-    const allowedEmail = "mbdryden20@gmail.com";
-    const allowedPassword = "mbd40536";
+    firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(userCredential => {
+    loginForm.style.display = "none";
+    dashboard.style.display = "block";
+    startRelayControl();
+  })
+  .catch(error => {
+    alert("Login failed");
+  });
 
     const loginForm = document.getElementById("loginForm");
     const dashboard = document.getElementById("dashboard");
