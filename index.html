@@ -1,78 +1,197 @@
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breadboard Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  // Firebase config
-  const firebaseConfig = {
-    apiKey: "AIzaSyBpfr0ZTuVGPOa72tEi1ui3_vqhA63-jGg",
-    authDomain: "breadboard-297d4.firebaseapp.com",
-    databaseURL: "https://breadboard-297d4-default-rtdb.firebaseio.com",
-    projectId: "breadboard-297d4",
-    storageBucket: "breadboard-297d4.firebasestorage.app",
-    messagingSenderId: "136042113028",
-    appId: "1:136042113028:web:43272123e5aebbf7f56d51"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-
-  const loginForm = document.getElementById("loginForm");
-  const dashboard = document.getElementById("dashboard");
-  const loginBtn = document.getElementById("loginBtn");
-
-  loginBtn.addEventListener("click", () => {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (!email || !password) {
-      alert("Please enter email and password.");
-      return;
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
     }
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .catch(err => {
-        console.error(err);
-        alert("Login failed");
-      });
-  });
-
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      loginForm.style.display = "none";
-      dashboard.style.display = "block";
-      startRelayControl();
-    } else {
-      dashboard.style.display = "none";
-      loginForm.style.display = "block";
+    h1 {
+      margin-top: 20px;
     }
-  });
 
-  function startRelayControl() {
-    const db = firebase.database();
-    const relays = [1, 2, 3, 4];
+    #loginForm, #dashboard {
+      max-width: 400px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 
-    relays.forEach(i => {
-      const status = document.getElementById("status" + i);
-      const btn = document.getElementById("btn" + i);
-      const ref = db.ref("relay" + i);
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
 
-      ref.on("value", snap => {
-        const state = snap.val();
-        status.innerText = state ? "ON" : "OFF";
-        btn.style.backgroundColor = state ? "green" : "blue";
-      });
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      background: #1976d2;
+    }
 
-      btn.onclick = () => {
-        ref.get().then(snap => ref.set(!snap.val()));
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .relay {
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fafafa;
+      border: 1px solid #ddd;
+    }
+
+    .status {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    #allOffBtn {
+      background: #d32f2f;
+    }
+
+    #logoutBtn {
+      background: #555;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Breadboard Control</h1>
+
+  <!-- LOGIN -->
+  <div id="loginForm">
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+    <div class="relay">
+      <div class="status">Relay 1: <span id="status1">--</span></div>
+      <button id="btn1">Toggle</button>
+    </div>
+
+    <div class="relay">
+      <div class="status">Relay 2: <span id="status2">--</span></div>
+      <button id="btn2">Toggle</button>
+    </div>
+
+    <div class="relay">
+      <div class="status">Relay 3: <span id="status3">--</span></div>
+      <button id="btn3">Toggle</button>
+    </div>
+
+    <div class="relay">
+      <div class="status">Relay 4: <span id="status4">--</span></div>
+      <button id="btn4">Toggle</button>
+    </div>
+
+    <button id="allOffBtn">All OFF</button>
+    <button id="logoutBtn">Logout</button>
+  </div>
+
+  <!-- FIREBASE SDKs (MUST COME FIRST) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+
+  <!-- APP CODE -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBpfr0ZTuVGPOa72tEi1ui3_vqhA63-jGg",
+        authDomain: "breadboard-297d4.firebaseapp.com",
+        databaseURL: "https://breadboard-297d4-default-rtdb.firebaseio.com",
+        projectId: "breadboard-297d4",
+        storageBucket: "breadboard-297d4.firebasestorage.app",
+        messagingSenderId: "136042113028",
+        appId: "1:136042113028:web:43272123e5aebbf7f56d51"
       };
+
+      firebase.initializeApp(firebaseConfig);
+
+      const loginForm = document.getElementById("loginForm");
+      const dashboard = document.getElementById("dashboard");
+      const loginBtn = document.getElementById("loginBtn");
+
+      loginBtn.onclick = () => {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+
+        if (!email || !password) {
+          alert("Enter email and password");
+          return;
+        }
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .catch(err => alert(err.message));
+      };
+
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          loginForm.style.display = "none";
+          dashboard.style.display = "block";
+          startRelays();
+        } else {
+          dashboard.style.display = "none";
+          loginForm.style.display = "block";
+        }
+      });
+
+      function startRelays() {
+        const db = firebase.database();
+
+        [1,2,3,4].forEach(i => {
+          const ref = db.ref("relay" + i);
+          const status = document.getElementById("status" + i);
+          const btn = document.getElementById("btn" + i);
+
+          ref.on("value", snap => {
+            const on = snap.val();
+            status.textContent = on ? "ON" : "OFF";
+            btn.style.background = on ? "green" : "#1976d2";
+          });
+
+          btn.onclick = () => {
+            ref.get().then(snap => ref.set(!snap.val()));
+          };
+        });
+
+        document.getElementById("allOffBtn").onclick = () => {
+          [1,2,3,4].forEach(i => firebase.database().ref("relay" + i).set(false));
+        };
+      }
+
+      document.getElementById("logoutBtn").onclick = () => {
+        firebase.auth().signOut();
+      };
+
     });
+  </script>
 
-    document.getElementById("allOffBtn").onclick = () => {
-      relays.forEach(i => db.ref("relay" + i).set(false));
-    };
-  }
-
-  document.getElementById("logoutBtn").onclick = () => {
-    firebase.auth().signOut();
-  };
-
-});
-</script>
+</body>
+</html>
