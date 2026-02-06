@@ -1,4 +1,6 @@
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+
   // Firebase config
   const firebaseConfig = {
     apiKey: "AIzaSyBpfr0ZTuVGPOa72tEi1ui3_vqhA63-jGg",
@@ -25,8 +27,7 @@
       return;
     }
 
-    firebase.auth()
-      .signInWithEmailAndPassword(email, password)
+    firebase.auth().signInWithEmailAndPassword(email, password)
       .catch(err => {
         console.error(err);
         alert("Login failed");
@@ -72,4 +73,6 @@
   document.getElementById("logoutBtn").onclick = () => {
     firebase.auth().signOut();
   };
+
+});
 </script>
