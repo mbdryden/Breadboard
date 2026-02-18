@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(userCredential => {
         const user = userCredential.user;
         // Write user to database
-        firebase.database().ref("users/" + boxId).set({
-          email: user.email,
-          boxName: null,
+        firebase.database().ref("users/" + user.uid).set({
+          boxId: boxId,
+          email: email,
           tempSet: false,
-          idealTemp: null
+          cycleInProgress: false
         });
-        window.location.href = "name.html";
+        window.location.href = "name.html"
       })
       .catch(err => alert(err.message));
   };
@@ -63,20 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function startHome() {
-    const db = firebase.database();
-    [1,2,3,4].forEach(i => {
-      const ref = db.ref("relay" + i);
-      const status = document.getElementById("status" + i);
-      const btn = document.getElementById("btn" + i);
-      ref.on("value", snap => {
-        const on = snap.val();
-        status.textContent = on ? "ON" : "OFF";
-        btn.style.background = on ? "green" : "#1976d2";
-      });
-      btn.onclick = () => ref.get().then(snap => ref.set(!snap.val()));
-    });
-    document.getElementById("allOffBtn").onclick = () => {
-      [1,2,3,4].forEach(i => firebase.database().ref("relay" + i).set(false));
+    document.getElementById("changeNameBtn").onclick = () => {
+        window.location.href = "name.html";
     };
     document.getElementById("logoutBtn").onclick = () => firebase.auth().signOut();
   }

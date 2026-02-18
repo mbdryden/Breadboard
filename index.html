@@ -7,18 +7,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; text-align: center; }
-    h1 { margin-top: 20px; }
-    #loginForm, #signupForm { max-width: 400px; margin: 40px auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-    input { width: 100%; padding: 12px; margin: 10px 0; box-sizing: border-box; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; }
-    button { width: 100%; padding: 12px; margin-top: 10px; font-size: 16px; border-radius: 8px; border: none; cursor: pointer; color: white; background: #1976d2; }
-    button:hover { opacity: 0.9; }
-    .relay { margin: 15px 0; padding: 15px; border-radius: 10px; background: #fafafa; border: 1px solid #ddd; }
-    .status { font-weight: bold; margin-bottom: 8px; }
-    #allOffBtn { background: #d32f2f; }
-    #logoutBtn { background: #555; margin-top: 20px; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Breadboard Control</h1>
@@ -40,11 +29,7 @@
   </div>
 
   <div id="dashboard" style="display:none;">
-    <div class="relay"><div class="status">Relay 1: <span id="status1">--</span></div><button id="btn1">Toggle</button></div>
-    <div class="relay"><div class="status">Relay 2: <span id="status2">--</span></div><button id="btn2">Toggle</button></div>
-    <div class="relay"><div class="status">Relay 3: <span id="status3">--</span></div><button id="btn3">Toggle</button></div>
-    <div class="relay"><div class="status">Relay 4: <span id="status4">--</span></div><button id="btn4">Toggle</button></div>
-    <button id="allOffBtn">All OFF</button>
+    <button id="changeNameBtn">Change Starter Name</button>
     <button id="logoutBtn">Logout</button>
   </div>
 

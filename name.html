@@ -6,19 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 60px; background: #f5f5f5; }
-    .card { max-width: 400px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-    button { padding: 12px 24px; font-size: 16px; border-radius: 8px; border: none; cursor: pointer; color: white; background: #1976d2; margin-top: 20px; }
-  </style>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Welcome! 🎉</h1>
-    <p id="welcomeMsg">Thanks for creating an account.</p>
-    <button id="continueBtn">Go to Dashboard</button>
+  <div id="nameForm">
+    <h1>Set a name for your starter!</h1>
+    <input id="boxName" type="name" placeholder="Name" />
+    <button id="continueBtn">Save Name</button>
+    <button id="skipBtn">Skip for Now</button>
   </div>
 
-  <script src="welcome.js" defer></script>
+  <script src="name.js" defer></script>
 </body>
 </html>

@@ -10,16 +10,35 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(user => {
-  if (!user) {
-    // Not logged in, send back to login
+firebase.auth().onAuthStateChanged(currentUser => {
+  if (!currentUser) {
     window.location.href = "index.html";
     return;
   }
-  document.getElementById("welcomeMsg").textContent =
-    `Welcome, ${user.email}! Your account has been created.`;
-});
 
-document.getElementById("continueBtn").onclick = () => {
-  window.location.href = "index.html";
-};
+    document.getElementById("continueBtn").onclick = () => {
+    const name = document.getElementById("boxName").value;
+    const db = firebase.database();
+
+        // First get the current user's boxId
+        db.ref("users/" + currentUser.uid).get().then(snap => {
+            const boxId = snap.val().boxId;
+
+            // Then find all users with that boxId
+            db.ref("users").orderByChild("boxId").equalTo(boxId).get().then(snapshot => {
+            const updates = {};
+            snapshot.forEach(child => {
+                updates[child.key + "/boxName"] = name;
+            });
+            return db.ref("users").update(updates);
+            }).then(() => {
+            window.location.href = "index.html";
+            }).catch(err => alert(err.message));
+        });
+    };
+
+    document.getElementById("skipBtn").onclick = () => {
+        window.location.href = "index.html";
+    };
+
+});
