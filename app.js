@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
 
   const loginForm = document.getElementById("loginForm");
   const signupForm = document.getElementById("signupForm");
@@ -55,14 +56,43 @@ document.addEventListener("DOMContentLoaded", () => {
       loginForm.style.display = "none";
       signupForm.style.display = "none";
       dashboard.style.display = "block";
-      startHome();
+      db.ref("users/" + user.uid).get().then(snap => {
+        const currCycle = snap.val().cycleInProgress;
+        if (currCycle) {
+          startDash(user);
+        } else {
+          startDashNoCycle(user);
+        }
+      });
     } else {
       dashboard.style.display = "none";
       loginForm.style.display = "block";
     }
   });
 
-  function startHome() {
+  function startDashNoCycle(user) {
+    document.getElementById("changeNameBtn").onclick = () => {
+        window.location.href = "name.html";
+    };
+    document.getElementById("startCycleBtn").onclick = () => {
+      db.ref("users/" + user.uid).get().then(snap => {
+        const boxId = snap.val().boxId;
+        db.ref("users").orderByChild("boxId").equalTo(boxId).get().then(snapshot => {
+          const updates = {};
+          snapshot.forEach(child => {
+            updates[child.key + "/cycleInProgress"] = true;
+          });
+          db.ref("users").update(updates).then(() => {
+            startDash(user);  // only called after update completes
+          }).catch(err => alert(err.message));
+        }).catch(err => alert(err.message));
+      }).catch(err => alert(err.message));
+    };
+    document.getElementById("logoutBtn").onclick = () => firebase.auth().signOut();
+  }
+
+  function startDash(user) {
+    document.getElementById("startCycleBtn").style.display = "none";
     document.getElementById("changeNameBtn").onclick = () => {
         window.location.href = "name.html";
     };
