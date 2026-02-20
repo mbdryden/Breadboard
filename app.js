@@ -44,19 +44,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   document.getElementById("signupBtn").onclick = () => {
-    const boxId = document.getElementById("newBoxId").value;
+    const boxId = document.getElementById("newBoxId").value.trim();
     const email = document.getElementById("newEmail").value.trim();
     const password = document.getElementById("newPassword").value;
     const confirm = document.getElementById("confirmPassword").value;
     if (password !== confirm) { alert("Passwords do not match"); return; }
+
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(userCredential => {
         const user = userCredential.user;
-        return firebase.database().ref("users/" + user.uid).set({
-          boxId: boxId,
-          email: email,
-          tempSet: false,
-          cycleInProgress: false
+        const db = firebase.database();
+
+        // Check if anyone else has this boxId
+        return db.ref("users").orderByChild("boxId").equalTo(boxId).get().then(snapshot => {
+          console.log("snapshot exists:", snapshot.exists());
+          console.log("snapshot size:", snapshot.size);
+          snapshot.forEach(child => console.log("found:", child.val()));
+
+          // If another user has this boxId, copy their values
+          if (snapshot.exists()) {
+            snapshot.forEach(child => {
+              if (child.key === user.uid) return;
+              const data = child.val();
+              sharedData = {
+                tempSet: data.tempSet ?? false,
+                cycleInProgress: data.cycleInProgress ?? false,
+                lastFed: data.lastFed ?? null,
+                boxName: data.boxName ?? null,
+                timeLeftInCycle: data.timeLeftInCycle ?? null
+              };
+            });
+          }
+
+          return db.ref("users/" + user.uid).set({
+            boxId: boxId,
+            email: email,
+            ...sharedData
+          });
         });
       })
       .then(() => {
@@ -111,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function startDash(user) {
     document.getElementById("startCycleBtn").style.display = "none";
+    document.getElementById("feedBtn").style.display = "none";
     document.getElementById("changeNameBtn").onclick = () => {
         window.location.href = "name.html";
     };

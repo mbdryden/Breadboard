@@ -9,15 +9,28 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
+const db = firebase.database();
 firebase.auth().onAuthStateChanged(currentUser => {
   if (!currentUser) {
     window.location.href = "index.html";
     return;
   }
-
+    db.ref("users/" + currentUser.uid).get().then(snap => {
+        const data = snap.val();
+        if (data.lastFed) {
+            const timeSinceFed = Date.now() - data.lastFed;
+            const days = Math.floor(timeSinceFed / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeSinceFed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let text = "Last fed ";
+            if (days > 0) text += `${days}d `;
+            text += `${hours}h ago`;
+            document.getElementById("lastFedHeader").textContent = text;
+        } else {
+            document.getElementById("lastFedHeader").textContent = "No feeding recorded yet.";
+        }
+    });
     document.getElementById("feedBtn").onclick = () => {
-    const db = firebase.database();
+
 
         // First get the current user's boxId
         db.ref("users/" + currentUser.uid).get().then(snap => {
@@ -27,7 +40,7 @@ firebase.auth().onAuthStateChanged(currentUser => {
             db.ref("users").orderByChild("boxId").equalTo(boxId).get().then(snapshot => {
             const updates = {};
             snapshot.forEach(child => {
-                updates[child.key + "/lastFed"] = Date.now();
+                updates[child.key + "/lastFed"] = firebase.database.ServerValue.TIMESTAMP;
             });
             return db.ref("users").update(updates);
             }).then(() => {

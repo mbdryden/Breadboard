@@ -16,9 +16,17 @@ firebase.auth().onAuthStateChanged(currentUser => {
     return;
   }
 
+    const db = firebase.database();
+    db.ref("users/" + currentUser.uid).get().then(snap => {
+        const data = snap.val();
+        if (data.boxName) {
+            document.getElementById("nameHeader").textContent = "Your starter's name is " + data.boxName + "!\nChange name below:";
+        } else {
+            document.getElementById("nameHeader").textContent = "Set starter's name below!";
+        }
+    });
     document.getElementById("continueBtn").onclick = () => {
     const name = document.getElementById("boxName").value;
-    const db = firebase.database();
 
         // First get the current user's boxId
         db.ref("users/" + currentUser.uid).get().then(snap => {
