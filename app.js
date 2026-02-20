@@ -24,12 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
     signupForm.style.display = "none";
     loginForm.style.display = "block";
   };
+
+  ["email", "password"].forEach(id => {
+    document.getElementById(id).addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("loginBtn").click();
+    });
+});
+
   document.getElementById("loginBtn").onclick = () => {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     firebase.auth().signInWithEmailAndPassword(email, password)
       .catch(err => alert(err.message));
   };
+
+  ["newBoxId", "newEmail", "newPassword", "confirmPassword"].forEach(id => {
+    document.getElementById(id).addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("signupBtn").click();
+    });
+  });
   document.getElementById("signupBtn").onclick = () => {
     const boxId = document.getElementById("newBoxId").value;
     const email = document.getElementById("newEmail").value.trim();
@@ -39,14 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(userCredential => {
         const user = userCredential.user;
-        // Write user to database
-        firebase.database().ref("users/" + user.uid).set({
+        return firebase.database().ref("users/" + user.uid).set({
           boxId: boxId,
           email: email,
           tempSet: false,
           cycleInProgress: false
         });
-        window.location.href = "name.html"
+      })
+      .then(() => {
+        window.location.href = "name.html";
       })
       .catch(err => alert(err.message));
   };
@@ -81,12 +95,16 @@ document.addEventListener("DOMContentLoaded", () => {
           const updates = {};
           snapshot.forEach(child => {
             updates[child.key + "/cycleInProgress"] = true;
+            updates[child.key + "/timeLeftInCycle"] = 30;
           });
           db.ref("users").update(updates).then(() => {
             startDash(user);  // only called after update completes
           }).catch(err => alert(err.message));
         }).catch(err => alert(err.message));
       }).catch(err => alert(err.message));
+    };
+    document.getElementById("feedBtn").onclick = () => {
+        window.location.href = "feed.html";
     };
     document.getElementById("logoutBtn").onclick = () => firebase.auth().signOut();
   }
