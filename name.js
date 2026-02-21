@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(currentUser => {
     db.ref("users/" + currentUser.uid).get().then(snap => {
         const data = snap.val();
         if (data.boxName) {
-            document.getElementById("nameHeader").textContent = "Your starter's name is " + data.boxName + "!\nChange name below:";
+            document.getElementById("nameHeader").textContent = "Your starter's name is " + data.boxName + "!";
         } else {
             document.getElementById("nameHeader").textContent = "Set starter's name below!";
         }

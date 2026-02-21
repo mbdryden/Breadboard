@@ -3,8 +3,13 @@
     src: url(Relationship_of_melodrame.ttf);
 }
 
+@font-face {
+    font-family: canela;
+    src: url(canela.otf);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: canela;
   background: #E3D8C6;
   margin: 0;
   padding: 20px;
@@ -15,6 +20,15 @@ h1 {
   font-family: relationship;
   font-size: 100px;
   color: #D39932;
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+h2 {
+  margin-top: 0px;
+  font-family: canela;
+  font-size: 30px;
+  color: #996633;
 }
 #loginForm, #signupForm, #nameForm, #dashboard {
   max-width: 400px;
@@ -33,6 +47,11 @@ input {
   border-radius: 8px;
   border: 1px solid #ccc;
   background: #E3D8C6;
+  font-family: canela;
+  color: #996633;
+}
+input:focus {
+    outline: 2px solid #D39932;
 }
 button {
   width: 100%;
@@ -44,6 +63,7 @@ button {
   cursor: pointer;
   color: #E3D8C6;
   background: #225D65;
+  font-family: canela;
 }
 button:hover {
   opacity: 0.9;
@@ -63,6 +83,7 @@ button:hover {
   background: #d32f2f;
 }
 #logoutBtn, #skipBtn {
-  background: #555;
+  background: #E3D8C6;
+  color: #996633;
   margin-top: 20px;
 }
