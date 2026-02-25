@@ -20,11 +20,18 @@ firebase.auth().onAuthStateChanged(currentUser => {
     db.ref("users/" + currentUser.uid).get().then(snap => {
         const data = snap.val();
         if (data.boxName) {
-            document.getElementById("nameHeader").textContent = "Your starter's name is " + data.boxName + "!";
+            document.getElementById("nameHeader").innerHTML = "Your starter's name is " + data.boxName + "!<br>Change name below:";
+            document.getElementById("skipBtn").textContent = "Cancel";
         } else {
             document.getElementById("nameHeader").textContent = "Set starter's name below!";
+            document.getElementById("skipBtn").textContent = "Skip for Now";
         }
     });
+    ["boxName"].forEach(id => {
+    document.getElementById(id).addEventListener("keydown", (e) => {
+      if (e.key === "Enter") document.getElementById("continueBtn").click();
+    });
+  });
     document.getElementById("continueBtn").onclick = () => {
     const name = document.getElementById("boxName").value;
 

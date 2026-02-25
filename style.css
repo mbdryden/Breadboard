@@ -30,7 +30,7 @@ h2 {
   font-size: 30px;
   color: #996633;
 }
-#loginForm, #signupForm, #nameForm, #dashboard {
+#loginForm, #signupForm, #nameForm, #tempForm, #dashboard {
   max-width: 400px;
   margin: 40px auto;
   background: #CAB592;

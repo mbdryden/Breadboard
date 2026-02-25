@@ -55,6 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const user = userCredential.user;
         const db = firebase.database();
 
+        let sharedData = {
+          tempSet: false,
+          cycleInProgress: false,
+          lastFed: null,
+          boxName: null,
+          timeLeftInCycle: null
+        }
+
         // Check if anyone else has this boxId
         return db.ref("users").orderByChild("boxId").equalTo(boxId).get().then(snapshot => {
           console.log("snapshot exists:", snapshot.exists());
@@ -96,6 +104,20 @@ document.addEventListener("DOMContentLoaded", () => {
       dashboard.style.display = "block";
       db.ref("users/" + user.uid).get().then(snap => {
         const currCycle = snap.val().cycleInProgress;
+        const name = snap.val().boxName;
+        const temp = snap.val().tempSet;
+        if(name) {
+          document.getElementById("changeNameBtn").textContent = "Change Name";
+        } else {
+          document.getElementById("changeNameBtn").textContent = "Set Starter Name";
+        }
+
+        if(temp) {
+          document.getElementById("idealTempBtn").textContent = "Change Ideal Temp";
+        } else {
+          document.getElementById("idealTempBtn").textContent = "Set Ideal Temp";
+        }
+
         if (currCycle) {
           startDash(user);
         } else {
@@ -112,6 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("changeNameBtn").onclick = () => {
         window.location.href = "name.html";
     };
+    document.getElementById("idealTempBtn").onclick = () => {
+        window.location.href = "temp.html";
+    };
+    document.getElementById("timeLeftHeader").textContent = "You do not currently have a cycle in progress.";
     document.getElementById("startCycleBtn").onclick = () => {
       db.ref("users/" + user.uid).get().then(snap => {
         const boxId = snap.val().boxId;
@@ -134,10 +160,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startDash(user) {
+    db.ref("users/" + user.uid).on("value", snap => {
+        const timeLeftInCycle = snap.val().timeLeftInCycle;
+        const hours = Math.floor(timeLeftInCycle / 3600);
+        const minutes = Math.floor((timeLeftInCycle % 3600) / 60);
+        const seconds = timeLeftInCycle % 60;
+        let text = `${hours}h ${minutes}m ${seconds}s`;
+        if(timeLeftInCycle > 0) {
+          document.getElementById("timeLeftHeader").textContent = "Time left in current cycle: " + text;
+        } else {
+          document.getElementById("timeLeftHeader").textContent = "Starter has peaked!";
+        }
+    });
     document.getElementById("startCycleBtn").style.display = "none";
     document.getElementById("feedBtn").style.display = "none";
     document.getElementById("changeNameBtn").onclick = () => {
         window.location.href = "name.html";
+    };
+    document.getElementById("idealTempBtn").onclick = () => {
+        window.location.href = "temp.html";
     };
     document.getElementById("logoutBtn").onclick = () => firebase.auth().signOut();
   }
