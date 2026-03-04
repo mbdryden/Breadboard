@@ -1,11 +1,11 @@
 @font-face {
     font-family: relationship;
-    src: url(Relationship_of_melodrame.ttf);
+    src: url(fonts/Relationship_of_melodrame.ttf);
 }
 
 @font-face {
     font-family: canela;
-    src: url(canela.otf);
+    src: url(fonts/canela.otf);
 }
 
 body {
@@ -30,7 +30,7 @@ h2 {
   font-size: 30px;
   color: #996633;
 }
-#loginForm, #signupForm, #nameForm, #tempForm, #dashboard {
+#loginForm, #signupForm, #nameForm, #tempForm, #dashboard, #switchBoxForm, #addBoxForm {
   max-width: 400px;
   margin: 40px auto;
   background: #CAB592;
@@ -68,22 +68,22 @@ button {
 button:hover {
   opacity: 0.9;
 }
-.relay {
-  margin: 15px 0;
-  padding: 15px;
-  border-radius: 10px;
-  background: #fafafa;
-  border: 1px solid #ddd;
+.box-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .status {
   font-weight: bold;
   margin-bottom: 8px;
 }
-#allOffBtn {
-  background: #d32f2f;
-}
-#logoutBtn, #skipBtn {
+#logoutBtn, #skipBtn, #switchBoxBtn, #addBoxBtn {
   background: #E3D8C6;
   color: #996633;
   margin-top: 20px;
+}
+button.removeBtn {
+  background: #E3D8C6;
+  color: #996633;
+  width: 80px;
 }
