@@ -45,12 +45,14 @@ def update_display(t, h):
     display.txt_write(str(round(t, 1)) + "°    " + str(round(h, 1)) + "%")
     
 last_temp = None
+last_humi = None
 temp = 124.5 #taken from sensor
-humi = 60 # taken from sensor
+humi = 70 # taken from sensor
 while True:
-    if temp != last_temp:
+    if temp != last_temp or last_humi != humi:
         update_display(temp, humi)
         last_temp = temp
         temp += 0.2
+        humi -= 1
     print("hi")
     time.sleep(5)
