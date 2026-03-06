@@ -11,34 +11,83 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>welcome!</h1>
-  <h2 id="timeLeftHeader" style="display:none;"></h2>
+  <h1 id="header">welcome!</h1>
+  <h2 id="subheader" style="display:none;"></h2>
 
-  <div id="loginForm">
+  <!-- Login -->
+  <div id="view-login">
     <input id="email" type="email" placeholder="Email" />
     <input id="password" type="password" placeholder="Password" />
-    <button type="button" id="loginBtn">Login</button>
-    <button type="button" id="showSignupBtn">Create Account</button>
+    <button id="loginBtn">Login</button>
+    <button id="showSignupBtn">Create Account</button>
   </div>
 
-  <div id="signupForm" style="display:none;">
-    <input id="newBoxId" type="boxId" placeholder="Box ID" />
+  <!-- Signup -->
+  <div id="view-signup" style="display:none;">
+    <input id="newBoxId" type="text" placeholder="Box ID" />
     <input id="newEmail" type="email" placeholder="Email" />
     <input id="newPassword" type="password" placeholder="Password" />
     <input id="confirmPassword" type="password" placeholder="Confirm Password" />
-    <button type="button" id="signupBtn">Sign Up</button>
-    <button type="button" id="backToLoginBtn">Back to Login</button>
+    <button id="signupBtn">Sign Up</button>
+    <button id="backToLoginBtn">Back to Login</button>
   </div>
 
-  <div id="dashboard" style="display:none;">
-    <button id="changeNameBtn"></button>
+  <!-- Dashboard -->
+  <div id="view-dashboard" style="display:none;">
     <button id="startCycleBtn">Start New Cycle</button>
+    <button id="changeNameBtn"></button>
     <button id="idealTempBtn"></button>
     <button id="feedBtn">Feed Starter</button>
-    <button id="switchBoxBtn">Switch Boxes</button>
+    <button id="switchBoxBtn">Switch Box</button>
     <button id="logoutBtn">Logout</button>
   </div>
 
-  <script src="app.js" defer></script>
+  <!-- Name -->
+  <div id="view-name" style="display:none;">
+    <input id="nameInput" type="text" placeholder="Starter Name" />
+    <button id="continueBtn">Save</button>
+    <button id="skipNameBtn">Skip for Now</button>
+  </div>
+
+  <!-- Temp -->
+  <div id="view-temp" style="display:none;">
+    <input id="idealTempInput" type="number" placeholder="Ideal Temp (°F)" />
+    <button id="setTempBtn">Save</button>
+    <button id="resetTempBtn">Reset to Default</button>
+    <button id="skipTempBtn">Cancel</button>
+  </div>
+
+  <!-- Feed -->
+  <div id="view-feed" style="display:none;">
+    <button id="logFeedBtn">Log Feeding</button>
+    <button id="skipFeedBtn">Cancel</button>
+  </div>
+
+  <!-- Switch Box -->
+  <div id="view-switchBox" style="display:none;">
+    <button id="addBoxBtn">Add New Box</button>
+    <div id="boxList"></div>
+    <button id="cancelSwitchBtn">Cancel</button>
+  </div>
+
+  <!-- Add Box -->
+  <div id="view-addBox" style="display:none;">
+    <input id="newBoxIdInput" type="text" placeholder="Box ID" />
+    <button id="saveNewBoxBtn">Add Box</button>
+    <button id="cancelAddBtn">Cancel</button>
+  </div>
+
+  <script src="firebase-init.js" defer></script>
+  <script src="router.js" defer></script>
+  <script src="views/auth.js" defer></script>
+  <script src="views/dashboard.js" defer></script>
+  <script src="views/name.js" defer></script>
+  <script src="views/temp.js" defer></script>
+  <script src="views/feed.js" defer></script>
+  <script src="views/switchBox.js" defer></script>
+  <script src="views/addBox.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => initAuth());
+  </script>
 </body>
 </html>
