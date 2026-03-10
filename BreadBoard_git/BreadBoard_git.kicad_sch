@@ -6091,6 +6091,928 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "cboot:GRM155R71A104KA01D"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 3.8109 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "GRM155R71A104KA01D"
+				(at 0 -5.0885 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "GRM155R71A104KA01D:CAPC1005X55N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GRM155R71A104KA01D_0_0"
+				(rectangle
+					(start 0 -1.9069)
+					(end 0.635 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.9069 -1.9069)
+					(end 2.54 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ccomp2:C0402C300J5GACTU"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "C0402C300J5GACTU"
+				(at 3.81 -3.81 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "CAPC10555_55N_KEM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://content.kemet.com/datasheets/KEM_C1003_C0G_SMD.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "C0402C300J5GACTU"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CAPC10555_55N_KEM CAPC10555_55N_KEM-M CAPC10555_55N_KEM-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C0402C300J5GACTU_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "C0402C300J5GACTU_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ccomp:CL05C821JB5NNNC"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 3.8109 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "CL05C821JB5NNNC"
+				(at 0 -5.0885 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "CL05C821JB5NNNC:CAPC1005X55N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "E_max" "0.55"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "L_max" "0.35"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "A_max" "0.55"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "L1_nom" "0.25"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "D_max" "1.05"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "A_nom" "0.55"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "L1_max" "0.35"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "L1_min" "0.15"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "A_min" "0.55"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "E_min" "0.45"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "D_min" "0.95"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "D_nom" "1.0"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "E_nom" "0.5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "IPC 7351B"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "L_min" "0.15"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "L_nom" "0.25"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Samsung Electro-Mechanics"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "CL05C821JB5NNNC_0_0"
+				(rectangle
+					(start 0 -1.9069)
+					(end 0.635 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.9069 -1.9069)
+					(end 2.54 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "cin:C2012X6S1H155K125AB"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0 3.8109 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "C2012X6S1H155K125AB"
+				(at 0 -5.0885 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "C2012X6S1H155K125AB:CAPC2012X145N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C2012X6S1H155K125AB_0_0"
+				(rectangle
+					(start 0 -1.9069)
+					(end 0.635 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.9069 -1.9069)
+					(end 2.54 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "cout2:MSAST21GBB5106MTNA01"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "MSAST21GBB5106MTNA01"
+				(at -2.54 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "MSAST21GBB5106MTNA01:CAPC2012X145N"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "NA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Taiyo Yuden"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "1.45mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "IPC-7351B"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "MSAST21GBB5106MTNA01_0_0"
+				(rectangle
+					(start 0 -1.9069)
+					(end 0.635 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.9069 -1.9069)
+					(end 2.54 1.905)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "cout:APXE6R3ARA101ME61G"
 			(pin_names
 				(offset 0.254)
@@ -6326,6 +7248,630 @@
 					(at 0 -7.62 90)
 					(length 2.54)
 					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "cvcc:GRM188R71A225KE15D"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "GRM188R71A225KE15D"
+				(at 3.81 -3.81 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "G-188_MUR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "GRM188R71A225KE15D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "GRM188R71A225KE15D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "G-188_MUR G-188_MUR-M G-188_MUR-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GRM188R71A225KE15D_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "GRM188R71A225KE15D_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "l1:CDEP63MENP-R68MC"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at 6.985 5.08 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "CDEP63MENP-R68MC"
+				(at 6.985 -2.54 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "IND_CDEP63MENP-R68MC_SUM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "CDEP63MENP-R68MC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "CDEP63MENP-R68MC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "IND_CDEP63MENP-R68MC_SUM IND_CDEP63MENP-R68MC_SUM-M IND_CDEP63MENP-R68MC_SUM-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CDEP63MENP-R68MC_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.54 1.27)
+					(mid 3.81 2.5344)
+					(end 5.08 1.27)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 5.08 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 5.08 1.27)
+					(mid 6.35 2.5344)
+					(end 7.62 1.27)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 7.62 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.62 1.27)
+					(mid 8.89 2.5344)
+					(end 10.16 1.27)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 0) (xy 10.16 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 10.16 1.27)
+					(mid 11.43 2.5344)
+					(end 12.7 1.27)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 0) (xy 12.7 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CDEP63MENP-R68MC_1_2"
+				(arc
+					(start -1.27 10.16)
+					(mid -2.5344 11.43)
+					(end -1.27 12.7)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.27 7.62)
+					(mid -2.5344 8.89)
+					(end -1.27 10.16)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.27 5.08)
+					(mid -2.5344 6.35)
+					(end -1.27 7.62)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.27 2.54)
+					(mid -2.5344 3.81)
+					(end -1.27 5.08)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 12.7) (xy -1.27 12.7)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 10.16) (xy -1.27 10.16)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 7.62) (xy -1.27 7.62)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 5.08) (xy -1.27 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -1.27 2.54)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 15.24 270)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 90)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7237,6 +8783,12 @@
 		(uuid "36a77f8e-4029-4999-aa2b-e655204bcbca")
 	)
 	(junction
+		(at 262.89 308.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "378720ab-042e-4ae1-875a-6e9c006dfc82")
+	)
+	(junction
 		(at 177.8 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7259,12 +8811,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3f403371-c873-4680-af20-375be9eee78b")
-	)
-	(junction
-		(at 262.89 308.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "464d5963-068c-4125-9743-8bc30bb01093")
 	)
 	(junction
 		(at 203.2 350.52)
@@ -7301,6 +8847,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "57242e3a-9ba3-4599-a9df-0849fa470c5f")
+	)
+	(junction
+		(at 281.94 308.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c7e4ff5-b314-46d3-b61a-0a02f0f03f21")
 	)
 	(junction
 		(at 106.68 184.15)
@@ -7387,6 +8939,12 @@
 		(uuid "9c34e995-7df7-4e52-8e93-054bffbc452d")
 	)
 	(junction
+		(at 298.45 308.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d5f0119-de0c-47c1-aa85-16ecdad2ef6a")
+	)
+	(junction
 		(at 212.09 354.33)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7447,12 +9005,6 @@
 		(uuid "bad26de8-887a-44ed-9a6b-bd132c00ef5c")
 	)
 	(junction
-		(at 289.56 308.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bb0d0884-12f2-43d4-8df6-958a987bfea1")
-	)
-	(junction
 		(at 524.51 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7481,12 +9033,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca16014e-f695-43c0-893e-ef149079b258")
-	)
-	(junction
-		(at 281.94 308.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cabacfe4-d987-478e-9d93-efbc09486603")
 	)
 	(junction
 		(at 134.62 300.99)
@@ -8302,6 +9848,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 308.61) (xy 265.43 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cb283e5-5d0e-4c03-8ef5-c815157a1087")
+	)
+	(wire
+		(pts
 			(xy 195.58 99.06) (xy 195.58 110.49)
 		)
 		(stroke
@@ -8582,6 +10138,16 @@
 	)
 	(wire
 		(pts
+			(xy 298.45 308.61) (xy 308.61 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69a32ec3-7784-448a-96b6-ebcc3dcb83b4")
+	)
+	(wire
+		(pts
 			(xy 237.49 110.49) (xy 256.54 110.49)
 		)
 		(stroke
@@ -8802,7 +10368,7 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 308.61) (xy 289.56 351.79)
+			(xy 298.45 308.61) (xy 298.45 351.79)
 		)
 		(stroke
 			(width 0)
@@ -8952,6 +10518,16 @@
 	)
 	(wire
 		(pts
+			(xy 285.75 308.61) (xy 281.94 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96b56240-0c55-4f37-aa07-f50f5d5ff279")
+	)
+	(wire
+		(pts
 			(xy 483.87 123.19) (xy 459.74 123.19)
 		)
 		(stroke
@@ -8982,13 +10558,13 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 308.61) (xy 308.61 308.61)
+			(xy 298.45 308.61) (xy 293.37 308.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9af0ddfc-6804-4754-9a3b-87aa3137d1fe")
+		(uuid "9acb52c7-f3b5-47aa-a16b-352287fb093c")
 	)
 	(wire
 		(pts
@@ -9022,7 +10598,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 351.79) (xy 289.56 351.79)
+			(xy 223.52 351.79) (xy 298.45 351.79)
 		)
 		(stroke
 			(width 0)
@@ -9132,16 +10708,6 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 354.33) (xy 128.27 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b80b04fe-bf1f-43e5-9ea5-fe3ffc829ccb")
-	)
-	(wire
-		(pts
 			(xy 49.53 275.59) (xy 34.29 275.59)
 		)
 		(stroke
@@ -9229,6 +10795,16 @@
 			(type default)
 		)
 		(uuid "c9487997-ef38-42c8-9bac-a3ef330ceab0")
+	)
+	(wire
+		(pts
+			(xy 100.33 354.33) (xy 113.03 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c94f5493-3951-4d61-989e-a4bd179708dd")
 	)
 	(wire
 		(pts
@@ -9472,6 +11048,16 @@
 	)
 	(wire
 		(pts
+			(xy 280.67 308.61) (xy 281.94 308.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfc8a04e-1c63-4349-aecb-73b0ee8fe766")
+	)
+	(wire
+		(pts
 			(xy 191.77 184.15) (xy 191.77 185.42)
 		)
 		(stroke
@@ -9712,6 +11298,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 354.33) (xy 128.27 354.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7a3c0c9-23f2-4e6c-b2db-4d8c9c071113")
+	)
+	(wire
+		(pts
 			(xy 308.61 308.61) (xy 356.87 308.61)
 		)
 		(stroke
@@ -9719,26 +11315,6 @@
 			(type default)
 		)
 		(uuid "f8a87927-9519-4d82-b046-27a4c54a626b")
-	)
-	(wire
-		(pts
-			(xy 262.89 308.61) (xy 274.32 308.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa02fd4c-cef8-44ea-8bf2-3ba57626d3f1")
-	)
-	(wire
-		(pts
-			(xy 100.33 354.33) (xy 113.03 354.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fadd9543-a8d9-44e3-94f9-4fc5d252ac24")
 	)
 	(wire
 		(pts
@@ -11629,73 +13205,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
-		(at 278.13 308.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "308342ff-6e77-47c9-b857-a23e27701e96")
-		(property "Reference" "L1"
-			(at 278.384 306.832 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "680nH"
-			(at 277.876 309.626 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 278.13 308.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 278.13 308.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Inductor"
-			(at 278.13 308.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f532637b-93e6-4298-b5f5-a8de07a1db4a")
-		)
-		(pin "2"
-			(uuid "e957a2d2-3efe-42e2-ac4b-7ab8a0362c69")
-		)
-		(instances
-			(project ""
-				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 194.31 142.24 0)
 		(unit 1)
@@ -11828,35 +13337,42 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 100.33 284.48 0)
+		(lib_id "ccomp:CL05C821JB5NNNC")
+		(at 109.22 342.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4a23cb8b-6029-46cf-b2e6-5f02911b2759")
-		(property "Reference" "Cvcc"
-			(at 104.14 283.2099 0)
+		(uuid "403d8c30-e2f8-4614-abaf-a8fc6f55b17c")
+		(property "Reference" "C4"
+			(at 103.378 336.804 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "2.2uF"
-			(at 104.14 285.7499 0)
+		(property "Value" "CL05C821JB5NNNC"
+			(at 104.14 339.344 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 101.2952 288.29 0)
+		(property "Footprint" "CL05C821JB5NNNC:CAPC1005X55N"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 342.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11864,8 +13380,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 100.33 284.48 0)
+		(property "Description" ""
+			(at 109.22 342.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11873,25 +13389,186 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 100.33 284.48 0)
+		(property "E_max" "0.55"
+			(at 109.22 342.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "L_max" "0.35"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "A_max" "0.55"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "L1_nom" "0.25"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "D_max" "1.05"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "A_nom" "0.55"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "L1_max" "0.35"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "L1_min" "0.15"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "A_min" "0.55"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "E_min" "0.45"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "D_min" "0.95"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "D_nom" "1.0"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "E_nom" "0.5"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "IPC 7351B"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "L_min" "0.15"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "L_nom" "0.25"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Samsung Electro-Mechanics"
+			(at 109.22 342.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "a69296ee-9d0b-4909-a3c2-a653d3025732")
+			(uuid "7ebb01cc-d0c4-47f6-ab09-174f3aac1b89")
 		)
 		(pin "2"
-			(uuid "0dc4aa86-9878-4509-8f37-8695d937809f")
+			(uuid "50ec7275-1471-4c45-bad1-abda4ae33bde")
 		)
 		(instances
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Cvcc")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -12493,53 +14170,52 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 308.61 337.82 0)
+		(lib_id "ccomp2:C0402C300J5GACTU")
+		(at 113.03 354.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "613b92a2-452c-4ab2-aefc-612610a1e8e7")
-		(property "Reference" "Cout"
-			(at 312.42 336.5499 0)
+		(uuid "61334d04-0eca-450f-9524-b5a688c5db29")
+		(property "Reference" "C5"
+			(at 112.268 352.552 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "10uF"
-			(at 312.42 339.0899 0)
+		(property "Value" "C0402C300J5GACTU"
+			(at 116.586 358.394 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 309.5752 341.63 0)
+		(property "Footprint" "CAPC10555_55N_KEM"
+			(at 113.03 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 308.61 337.82 0)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_C1003_C0G_SMD.pdf"
+			(at 113.03 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 308.61 337.82 0)
+		(property "Description" ""
+			(at 113.03 354.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12548,15 +14224,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "633067ca-9a86-47c6-8f13-45915d388740")
+			(uuid "57e5ab14-d539-4c42-b7d8-896cd32cf1ec")
 		)
 		(pin "2"
-			(uuid "1edd3dd8-9b25-4417-883a-10445314659d")
+			(uuid "5a7bf79c-63fa-4978-9be5-c98cedc8cf3f")
 		)
 		(instances
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Cout")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -12696,6 +14372,76 @@
 			(project "BreadBoard_git"
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
 					(reference "Cbulk1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cin:C2012X6S1H155K125AB")
+		(at 49.53 298.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "76388bf9-f5dc-4e88-830d-ce728ea04a8c")
+		(property "Reference" "C6"
+			(at 45.466 296.418 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "C2012X6S1H155K125AB"
+			(at 53.086 287.782 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "C2012X6S1H155K125AB:CAPC2012X145N"
+			(at 49.53 298.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 298.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 298.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3bb5e4bd-0d91-4639-9fb7-b5f1398c84c5")
+		)
+		(pin "2"
+			(uuid "cfa92473-badd-46be-8230-b1245a6bab54")
+		)
+		(instances
+			(project ""
+				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -13055,73 +14801,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 110.49 342.9 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "88ab61e3-e709-402a-81b2-6aa1a94a78c8")
-		(property "Reference" "Ccomp"
-			(at 110.998 338.836 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "820.0pF"
-			(at 110.49 346.964 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 341.9348 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 110.49 342.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 110.49 342.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c3c6fccf-e28a-4b23-bc7f-f757e487031e")
-		)
-		(pin "2"
-			(uuid "9d00e762-3414-477d-b4a1-e9976cfd5a56")
-		)
-		(instances
-			(project ""
-				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Ccomp")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 261.62 334.01 0)
 		(unit 1)
@@ -13319,6 +14998,77 @@
 			(project "BreadBoard_git"
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cvcc:GRM188R71A225KE15D")
+		(at 100.33 288.29 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8db51b38-a92c-4df1-8abd-94746d2f3b04")
+		(property "Reference" "C8"
+			(at 101.346 305.816 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GRM188R71A225KE15D"
+			(at 103.886 305.816 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "G-188_MUR"
+			(at 100.33 288.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "GRM188R71A225KE15D"
+			(at 100.33 288.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 288.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "187c3b98-092f-4815-97d4-eda70c326e71")
+		)
+		(pin "1"
+			(uuid "fc163b5c-3bac-49c8-9273-01a153852979")
+		)
+		(instances
+			(project ""
+				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -13756,6 +15506,116 @@
 		)
 	)
 	(symbol
+		(lib_id "cout2:MSAST21GBB5106MTNA01")
+		(at 308.61 339.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a611c12a-0ddf-470c-b947-fc2d40b294b2")
+		(property "Reference" "C7"
+			(at 311.912 346.456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MSAST21GBB5106MTNA01"
+			(at 314.452 346.456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MSAST21GBB5106MTNA01:CAPC2012X145N"
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "NA"
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Taiyo Yuden"
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "1.45mm"
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "IPC-7351B"
+			(at 308.61 339.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9071c44f-bcec-4677-b1c3-eca5862db6d6")
+		)
+		(pin "2"
+			(uuid "2e13c6e2-c628-4632-9055-7584348b2388")
+		)
+		(instances
+			(project ""
+				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 212.09 355.6 0)
 		(unit 1)
@@ -13822,32 +15682,44 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 116.84 354.33 90)
+		(lib_id "cboot:GRM155R71A104KA01D")
+		(at 218.44 298.45 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a8c89a9c-d750-4468-9b7b-6a099db8bf44")
-		(property "Reference" "Ccomp2"
-			(at 116.586 350.774 90)
+		(uuid "a9faac65-5b67-4c38-8cc9-0c781d8e6442")
+		(property "Reference" "C3"
+			(at 222.25 295.9099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "30.0pF"
-			(at 116.586 358.394 90)
+		(property "Value" "GRM155R71A104KA01D"
+			(at 220.98 281.178 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 120.65 353.3648 0)
+		(property "Footprint" "GRM155R71A104KA01D:CAPC1005X55N"
+			(at 218.44 298.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 298.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13855,17 +15727,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 116.84 354.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 116.84 354.33 0)
+		(property "Description" ""
+			(at 218.44 298.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13874,15 +15737,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "822fbed2-39ef-4ab5-bf6c-922880d1178c")
+			(uuid "7eb5c84d-2b05-4b0c-a107-0be410075870")
 		)
 		(pin "2"
-			(uuid "d63433fd-7298-4c2c-a8c8-542e8573670c")
+			(uuid "50aad076-bf92-4196-9cfc-43f17fcacb3e")
 		)
 		(instances
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Ccomp2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -14182,76 +16045,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 218.44 297.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c077d28c-918b-4600-8eff-6a9059b7ee09")
-		(property "Reference" "Cboot"
-			(at 222.25 295.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 222.25 298.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.4052 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 218.44 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 218.44 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "10b940a1-8797-4062-90f4-0c5cedaccf3c")
-		)
-		(pin "2"
-			(uuid "248cdeae-4b3b-453a-a070-1e92c85fef70")
-		)
-		(instances
-			(project ""
-				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Cboot")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 139.7 347.98 0)
 		(unit 1)
@@ -14322,53 +16115,52 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 78.74 289.56 0)
+		(lib_id "l1:CDEP63MENP-R68MC")
+		(at 265.43 308.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c6d43494-2968-4159-9b2a-f6211c61ee0b")
-		(property "Reference" "Cvdda"
-			(at 82.55 288.2899 0)
+		(uuid "cd2ef198-1869-46c0-bc7b-24d2b40d79f0")
+		(property "Reference" "L3"
+			(at 275.082 300.99 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "100nF"
-			(at 82.55 290.8299 0)
+		(property "Value" "CDEP63MENP-R68MC"
+			(at 275.082 303.53 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 79.7052 293.37 0)
+		(property "Footprint" "IND_CDEP63MENP-R68MC_SUM"
+			(at 265.43 308.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 78.74 289.56 0)
+		(property "Datasheet" "CDEP63MENP-R68MC"
+			(at 265.43 308.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 78.74 289.56 0)
+		(property "Description" ""
+			(at 265.43 308.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14377,15 +16169,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "42385c97-2f0e-4df4-acf4-c88ab4ddd39c")
+			(uuid "4cf75623-601e-4c3a-9caa-25a4aca53179")
 		)
 		(pin "1"
-			(uuid "571c35ba-21fb-480e-ad38-8406fd05842f")
+			(uuid "5791fead-c7e9-44c4-b4fc-8f56c036e2f1")
 		)
 		(instances
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Cvdda")
+					(reference "L3")
 					(unit 1)
 				)
 			)
@@ -15099,6 +16891,76 @@
 		)
 	)
 	(symbol
+		(lib_id "cboot:GRM155R71A104KA01D")
+		(at 78.74 290.83 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef2d3197-a91f-42dd-887c-06a5d8f7004c")
+		(property "Reference" "C9"
+			(at 80.01 303.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GRM155R71A104KA01D"
+			(at 82.55 303.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "GRM155R71A104KA01D:CAPC1005X55N"
+			(at 78.74 290.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 290.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 290.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b5f78049-a1a8-4300-aaaf-b7e847a426ed")
+		)
+		(pin "1"
+			(uuid "93e29551-e276-45a6-a537-181dea8ee8f2")
+		)
+		(instances
+			(project ""
+				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDREF")
 		(at 229.87 369.57 0)
 		(unit 1)
@@ -15764,7 +17626,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 285.75 308.61 90)
+		(at 289.56 308.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15772,7 +17634,7 @@
 		(dnp no)
 		(uuid "f295bbb5-80c9-472e-84c7-89405d2000c1")
 		(property "Reference" "Rsense"
-			(at 285.75 306.07 90)
+			(at 289.56 306.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15780,7 +17642,7 @@
 			)
 		)
 		(property "Value" "3.0Ohm"
-			(at 285.496 311.15 90)
+			(at 289.306 311.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15788,7 +17650,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 285.75 310.388 90)
+			(at 289.56 310.388 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15797,7 +17659,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 285.75 308.61 0)
+			(at 289.56 308.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15806,7 +17668,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 285.75 308.61 0)
+			(at 289.56 308.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15894,76 +17756,6 @@
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
 					(reference "Rt")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 49.53 297.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ff9c5119-be04-43ba-b287-d0558d99f31d")
-		(property "Reference" "Cin"
-			(at 53.34 295.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1.5uF"
-			(at 53.34 298.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 50.4952 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 49.53 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 49.53 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dfe78e23-e01f-4e2f-9642-afbbd63a1e0a")
-		)
-		(pin "2"
-			(uuid "311b2da8-6823-42bb-b4e6-f0405789281b")
-		)
-		(instances
-			(project ""
-				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Cin")
 					(unit 1)
 				)
 			)
