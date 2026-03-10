@@ -6091,6 +6091,258 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "cout:APXE6R3ARA101ME61G"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 3.81 3.81 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "APXE6R3ARA101ME61G"
+				(at 3.81 -3.81 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "CHEMI-E61"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "APXE6R3ARA101ME61G"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "APXE6R3ARA101ME61G"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CHEMI-E61 CHEMI-E61-M CHEMI-E61-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "APXE6R3ARA101ME61G_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.4798 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.4798 -1.905) (xy 3.4798 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.1148 -1.905) (xy 4.1148 1.905)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "APXE6R3ARA101ME61G_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
@@ -7081,6 +7333,12 @@
 		(uuid "658f92a3-e2f6-4044-9785-7b697949d94c")
 	)
 	(junction
+		(at 256.54 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d845ac5-9be7-4c31-9ed0-6baa448948bc")
+	)
+	(junction
 		(at 203.2 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7247,12 +7505,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dfb68254-0516-4ce5-8f5d-e77904875a4f")
-	)
-	(junction
-		(at 256.54 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e34bd6c2-606b-4fa7-9812-8c2e5d13c49f")
 	)
 	(junction
 		(at 525.78 90.17)
@@ -7710,6 +7962,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 110.49) (xy 274.32 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "239f0428-b269-4cb4-a84e-0d204baba574")
+	)
+	(wire
+		(pts
 			(xy 100.33 342.9) (xy 100.33 354.33)
 		)
 		(stroke
@@ -7957,6 +8219,16 @@
 			(type default)
 		)
 		(uuid "3c286cab-860b-4c32-acb4-42194a77afc1")
+	)
+	(wire
+		(pts
+			(xy 256.54 110.49) (xy 256.54 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4040eb03-4fc9-4d55-bbb8-6af24e16ace4")
 	)
 	(wire
 		(pts
@@ -8287,16 +8559,6 @@
 			(type default)
 		)
 		(uuid "66ddefdc-8ed5-4919-ad42-df827c6dff59")
-	)
-	(wire
-		(pts
-			(xy 256.54 110.49) (xy 274.32 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6755e2a3-5e26-4077-8541-4e1ad52f02b5")
 	)
 	(wire
 		(pts
@@ -8947,16 +9209,6 @@
 			(type default)
 		)
 		(uuid "c195c9c3-632b-45de-b4e5-a7ccb951c2e7")
-	)
-	(wire
-		(pts
-			(xy 256.54 142.24) (xy 256.54 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2c56977-dba0-45c2-815a-5474bc27af61")
 	)
 	(wire
 		(pts
@@ -12241,76 +12493,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_US")
-		(at 256.54 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5d7bd801-6ec1-425c-a659-9dbc2ced8edc")
-		(property "Reference" "Cout1"
-			(at 260.35 145.0339 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100uF"
-			(at 260.35 147.5739 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "capacitor, US symbol"
-			(at 256.54 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0dee656f-1b68-444e-b51c-0e6c73ae20e1")
-		)
-		(pin "2"
-			(uuid "22ccbe68-654f-48ed-8060-1c05c96860bd")
-		)
-		(instances
-			(project "BreadBoard_git"
-				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
-					(reference "Cout1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 308.61 337.82 0)
 		(unit 1)
@@ -13000,6 +13182,77 @@
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cout:APXE6R3ARA101ME61G")
+		(at 290.83 120.65 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "89ad4d2d-3168-4a19-bf8a-7744cc13f24a")
+		(property "Reference" "C1"
+			(at 294.64 123.1899 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "APXE6R3ARA101ME61G"
+			(at 294.64 125.7299 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "CHEMI-E61"
+			(at 290.83 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "APXE6R3ARA101ME61G"
+			(at 290.83 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 290.83 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8b980849-e78f-4164-8bee-e98634636be4")
+		)
+		(pin "1"
+			(uuid "c357a34b-0247-4364-a02c-9db3ec619337")
+		)
+		(instances
+			(project ""
+				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -13718,6 +13971,77 @@
 			(project ""
 				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
 					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "cout:APXE6R3ARA101ME61G")
+		(at 256.54 149.86 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b60bc41b-f165-476e-b57f-d11afc980ea0")
+		(property "Reference" "C2"
+			(at 260.35 144.7799 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "APXE6R3ARA101ME61G"
+			(at 260.35 147.3199 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "CHEMI-E61"
+			(at 256.54 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "APXE6R3ARA101ME61G"
+			(at 256.54 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 256.54 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0493ac60-002c-4f60-9a99-19064f76dc4f")
+		)
+		(pin "2"
+			(uuid "9909deb5-099b-446a-983d-6d3b5e0a1847")
+		)
+		(instances
+			(project ""
+				(path "/f1e91c7e-2505-4703-8fd4-3771cb631fb1"
+					(reference "C2")
 					(unit 1)
 				)
 			)
