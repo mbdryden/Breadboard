@@ -1,0 +1,68 @@
+(Japanese_coding: sjis)
+(function "ECS_704099"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-02-28-14:46:58)
+    (utime 2025-12-29-07:05:51)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "SRU8043-3R9Y")
+)
+
+
+(pinAssign "ECS_704099"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-02-28-14:46:58)
+    (utime 2025-12-29-07:05:51)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_704099")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "SRU8043-3R9Y")
+)
+
+
+(part "SRU8043-3R9Y"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-02-28-14:46:58)
+    (utime 2025-12-29-07:05:51)
+    (packageRef "SRU8043-3R9Y")
+    (pinAssignRef "ECS_704099")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "L")
+    (property "description" "Fixed Inductors 3.9uH 30% SMD 8043")
+    (property "Manufacturer_Name" "Bourns")
+    (property "Manufacturer_Part_Number" "SRU8043-3R9Y")
+    (property "Mouser_Part_Number" "652-SRU8043-3R9Y")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SRU8043-3R9Y?qs=3fQS%252B%2FKBkgycpx7rnbhNgQ%3D%3D")
+    (property "Arrow_Part_Number" "SRU8043-3R9Y")
+    (property "Arrow_Price/Stock" "https://www.arrow.com/en/products/sru8043-3r9y/bourns?utm_currency=USD&region=nac")
+    (property "Datasheet_Link" "https://www.bourns.com/pdfs/SRU8043.pdf")
+    (property "compAreaTopHeight" 4.6)
+)
+
+

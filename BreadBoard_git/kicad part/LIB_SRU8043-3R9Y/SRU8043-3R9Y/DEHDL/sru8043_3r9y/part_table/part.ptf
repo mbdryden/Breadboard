@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SRU8043_3R9Y'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Bourns", "SRU8043-3R9Y" (!) = "", "SRU80433R9Y", "Other", "652-SRU8043-3R9Y", "https://www.mouser.co.uk/ProductDetail/Bourns/SRU8043-3R9Y?qs=3fQS%252B%2FKBkgycpx7rnbhNgQ%3D%3D", "SRU8043-3R9Y", "https://www.arrow.com/en/products/sru8043-3r9y/bourns?utm_currency=USD&region=nac", "Fixed Inductors 3.9uH 30% SMD 8043", "https://www.bourns.com/pdfs/SRU8043.pdf", "4.6 mm"
+END_PART
+
+END.

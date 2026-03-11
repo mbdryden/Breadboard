@@ -1,0 +1,16 @@
+.IAUCN04S7L028ATMA1 :1 ;MOSFET MOSFET_(20V 40V)
+IAUC120N06S5N011ATMA1
+*STM IC
+*NGS
+*PLB 1="S_1" 2="S_2" 3="S_3" 4="G" 5="D_1" 6="D_2" 7="D_3" 8="D_4" 9="D_5" 10="S_4"
+*MXP 10
+*DFN IAUCN04S7L028ATMA1
+~!Mouser Part Number (726-IAUCN04S7L028ATM)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IAUCN04S7L028ATMA1?qs=mELouGlnn3deeHozE86VbA%3D%3D)
+~!Manufacturer_Name (Infineon)
+~!Manufacturer_Part_Number (IAUCN04S7L028ATMA1)
+~!Link Datasheet (https://www.infineon.com/dgdl/Infineon-IAUCN04S7L028-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c8d2fe47b018d35eccb611a5a)
+~!Height (1.1mm)
+~!3D_Model (IAUCN04S7L028ATMA1)
+IAUCN04S7L028ATMA1
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 
