@@ -84,6 +84,8 @@
 	(net 4 "+3.3V")
 	(net 5 "Net-(U1-GPIO1)")
 	(net 6 "Net-(U1-GPIO0)")
+	(net 7 "Net-(U3-EXTCOMP)")
+	(net 8 "Net-(C12-Pad1)")
 	(footprint "Connector_BarrelJack:BarrelJack_Horizontal"
 		(layer "F.Cu")
 		(uuid "211a4603-3beb-4388-8c2e-c3d5cead5d41")
@@ -520,6 +522,286 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "ccomp2_5:CAPC10555_55N_KEM"
+		(layer "F.Cu")
+		(uuid "2aad7850-61c6-49b0-af8f-fd936c9c1f2e")
+		(at 65.523401 63.5)
+		(tags "C0402C300J5GACTU ")
+		(property "Reference" "C13"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "fb58adde-dd42-4206-8edb-c184b4ead41c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "C0402C300J5GACTU"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "0316f66e-4e61-4fd2-b8d7-ebaad2a5992f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_C1003_C0G_SMD.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a8cccaf-ed78-4464-a1a6-89ed345a176d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8fdffe9b-57f7-4921-8584-8de8eeed7da4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "CAPC10555_55N_KEM CAPC10555_55N_KEM-M CAPC10555_55N_KEM-L")
+		(path "/7f22106a-cd00-4901-8642-ba364a402b9a")
+		(sheetname "/")
+		(sheetfile "BreadBoard_git.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -0.880599 -0.427399)
+			(end 0.880599 -0.427399)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9b1fac3f-c76f-4fc1-920f-dc2a453c2597")
+		)
+		(fp_line
+			(start -0.880599 0.427399)
+			(end -0.880599 -0.427399)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "2186f8c4-e9ff-478a-9c09-c65e2f39e8c0")
+		)
+		(fp_line
+			(start 0.880599 -0.427399)
+			(end 0.880599 0.427399)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f662b0cc-444b-481a-bcc5-77d0cb068e89")
+		)
+		(fp_line
+			(start 0.880599 0.427399)
+			(end -0.880599 0.427399)
+			(stroke
+				(width 0.1524)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "e12cd538-59ff-4338-bb0c-b8a9727ca2ff")
+		)
+		(fp_line
+			(start -0.524999 -0.274999)
+			(end -0.524999 0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "872e4b2d-6a47-43ee-90cd-027d709408e5")
+		)
+		(fp_line
+			(start -0.524999 -0.274999)
+			(end -0.524999 0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e22e61e8-f667-4911-9df1-355fe47c164d")
+		)
+		(fp_line
+			(start -0.524999 0.274999)
+			(end -0.274999 0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "82ab2e08-ec76-4290-ae1e-a25558c102f4")
+		)
+		(fp_line
+			(start -0.524999 0.274999)
+			(end 0.524999 0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c86e88e0-e056-4581-a90f-df932f122b4a")
+		)
+		(fp_line
+			(start -0.274999 -0.274999)
+			(end -0.524999 -0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b3958ea1-e08e-4b9b-851d-945cdc8d8b58")
+		)
+		(fp_line
+			(start -0.274999 0.274999)
+			(end -0.274999 -0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9ab1f88d-f5e2-4b8d-a58e-5fb5907e48db")
+		)
+		(fp_line
+			(start 0.274999 -0.274999)
+			(end 0.274999 0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "1b84bb78-1cf8-4868-ae28-81e096e0a6f1")
+		)
+		(fp_line
+			(start 0.274999 0.274999)
+			(end 0.524999 0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "0f3f8101-bdcf-445e-bafb-e418fd1cfcd1")
+		)
+		(fp_line
+			(start 0.524999 -0.274999)
+			(end -0.524999 -0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a9b931e7-338a-4e37-b809-a20e3d7612d1")
+		)
+		(fp_line
+			(start 0.524999 -0.274999)
+			(end 0.274999 -0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c0fd0901-3f92-4e96-9e08-d80bd4725fba")
+		)
+		(fp_line
+			(start 0.524999 0.274999)
+			(end 0.524999 -0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "f84062e7-1d5f-4518-bdb3-5e3405fefdf6")
+		)
+		(fp_line
+			(start 0.524999 0.274999)
+			(end 0.524999 -0.274999)
+			(stroke
+				(width 0.0254)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "fd11cb4d-94d5-4527-a288-88d2f3012560")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "8023cefd-e2ad-42f9-82d7-14fc14876efe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd rect
+			(at -0.476599 0)
+			(size 0.503199 0.549999)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 8 "Net-(C12-Pad1)")
+			(pintype "unspecified")
+			(uuid "b7e52db7-73da-47d7-ad30-1a5bcce81418")
+		)
+		(pad "2" smd rect
+			(at 0.476599 0)
+			(size 0.503199 0.549999)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 7 "Net-(U3-EXTCOMP)")
+			(pintype "unspecified")
+			(uuid "6ffd87e9-89c9-4173-afc5-760caa5c7e1c")
+		)
+		(zone
+			(net 0)
+			(net_name "")
+			(layer "F.Cu")
+			(uuid "2a7c3228-803b-45ad-8d83-38cbdcf781d3")
+			(hatch full 0.508)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.254)
+			(filled_areas_thickness no)
+			(keepout
+				(tracks not_allowed)
+				(vias not_allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.508)
+				(thermal_bridge_width 0.508)
+			)
+			(polygon
+				(pts
+					(xy 65.349201 63.275801) (xy 65.697601 63.275801) (xy 65.697601 63.724199) (xy 65.349201 63.724199)
+				)
+			)
+		)
+		(embedded_fonts no)
 	)
 	(footprint "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad"
 		(layer "F.Cu")
