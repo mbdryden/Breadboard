@@ -48,8 +48,9 @@ function initTemp(user) {
     }).catch(err => alert(err.message));
   };
 
-  document.getElementById("skipTempBtn").onclick = () => {
+  document.getElementById("homeBtn").onclick = () => {
     showView("dashboard");
+    setActiveNav('homeBtn');
     initDashboard(user);
   };
 }

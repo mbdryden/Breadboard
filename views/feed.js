@@ -31,8 +31,9 @@ function initFeed(user) {
     }).catch(err => alert(err.message));
   };
 
-  document.getElementById("skipFeedBtn").onclick = () => {
+  document.getElementById("homeBtn").onclick = () => {
     showView("dashboard");
+    setActiveNav('homeBtn');
     initDashboard(user);
   };
 }

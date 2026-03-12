@@ -48,8 +48,9 @@ function initSwitchBox(user) {
     initAddBox(user);
   };
 
-  document.getElementById("cancelSwitchBtn").onclick = () => {
+  document.getElementById("homeBtn").onclick = () => {
     showView("dashboard");
+    setActiveNav('homeBtn');
     initDashboard(user);
   };
 }
