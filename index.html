@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <nav id="navbar" style="display:none;">
+    <ul>
+      <!-- Dashboard buttons -->
+      <li id="nav-home"><a href="#" id="homeBtn"><img src="icons/home.png" alt="Home" /></a></li>
+      <li id="nav-switchBox"><a href="#" id="switchBoxBtn"><img src="icons/switch.png" alt="Switch Boxes" /></a></li>
+      <li style="float:right" id="nav-changeName"><a href="#" id="changeNameBtn"><img src="icons/name.png" alt="Change Name" /></a></li>
+      <li style="float:right" id="nav-idealTemp"><a href="#" id="idealTempBtn"><img src="icons/temp.png" alt="Change Ideal Temp" /></a></li>
+      <li style="float:right" id="nav-feed"><a href="#" id="feedBtn"><img src="icons/feed.png" alt="Feed Starter" /></a></li>
+    </ul>
+  </nav>
+
   <h1 id="header">welcome!</h1>
   <h2 id="subheader" style="display:none;"></h2>
 
@@ -35,10 +47,6 @@
   <!-- Dashboard -->
   <div id="view-dashboard" style="display:none;">
     <button id="startCycleBtn">Start New Cycle</button>
-    <button id="changeNameBtn"></button>
-    <button id="idealTempBtn"></button>
-    <button id="feedBtn">Feed Starter</button>
-    <button id="switchBoxBtn">Switch Box</button>
     <button id="logoutBtn">Logout</button>
   </div>
 
@@ -46,7 +54,6 @@
   <div id="view-name" style="display:none;">
     <input id="nameInput" type="text" placeholder="Starter Name" />
     <button id="continueBtn">Save</button>
-    <button id="skipNameBtn">Skip for Now</button>
   </div>
 
   <!-- Temp -->
@@ -54,20 +61,17 @@
     <input id="idealTempInput" type="number" placeholder="Ideal Temp (°F)" />
     <button id="setTempBtn">Save</button>
     <button id="resetTempBtn">Reset to Default</button>
-    <button id="skipTempBtn">Cancel</button>
   </div>
 
   <!-- Feed -->
   <div id="view-feed" style="display:none;">
     <button id="logFeedBtn">Log Feeding</button>
-    <button id="skipFeedBtn">Cancel</button>
   </div>
 
   <!-- Switch Box -->
   <div id="view-switchBox" style="display:none;">
     <button id="addBoxBtn">Add New Box</button>
     <div id="boxList"></div>
-    <button id="cancelSwitchBtn">Cancel</button>
   </div>
 
   <!-- Add Box -->

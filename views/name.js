@@ -30,8 +30,9 @@ function initName(user) {
     }).catch(err => alert(err.message));
   };
 
-  document.getElementById("skipNameBtn").onclick = () => {
+  document.getElementById("homeBtn").onclick = () => {
     showView("dashboard");
+    setActiveNav('homeBtn');
     initDashboard(user);
   };
 }
