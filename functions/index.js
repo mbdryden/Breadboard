@@ -3,25 +3,29 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 exports.startCycle = functions.database
-    .ref("boxes/{boxId}/cycleInProgress")
+    .ref("boxes/{boxId}/startCycle")
     .onWrite(async (change, context) => {
-        const wasOff = !change.before.val();
         const isNowOn = change.after.val();
-        if (!wasOff || !isNowOn) return null;
+        if (!isNowOn) return null;
 
         const boxId = context.params.boxId;
         const db = admin.database();
 
-        for (let timeLeft = 25; timeLeft >= 0; timeLeft -= 5) {
+        const snap = await db.ref("boxes/" + boxId + "/timeLeftInCycle").get();
+        const totalSeconds = snap.val();
+
+        await db.ref("boxes/" + boxId).update({ cycleInProgress: true, startCycle: null });
+
+        for (let timeLeft = totalSeconds; timeLeft >= 0; timeLeft -= 5) {
             await new Promise((resolve) => setTimeout(resolve, 5000));
-            const updates = {
-                timeLeftInCycle: timeLeft
-            };
-            if (timeLeft === 0) {
-                updates.cycleInProgress = false;
-            }
+
+            const cycleSnap = await db.ref("boxes/" + boxId + "/cycleInProgress").get();
+            if (!cycleSnap.val()) return null;
+
+            const updates = { timeLeftInCycle: timeLeft };
+            if (timeLeft === 0) updates.cycleInProgress = false;
+
             await db.ref("boxes/" + boxId).update(updates);
         }
-
         return null;
     });

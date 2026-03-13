@@ -1,15 +1,19 @@
 function initName(user) {
+  const header = document.getElementById("header");
+  const subheader = document.getElementById("subheader");
+  if (!header || !subheader) return;
+
   db.ref("users/" + user.uid).get().then(userSnap => {
     const currBoxId = userSnap.val().currBoxId;
-    document.getElementById("header").textContent = "name";
-
+    header.textContent = "name";
     db.ref("boxes/" + currBoxId).get().then(boxSnap => {
       const box = boxSnap.val();
+      subheader.style.display = "block";
       if (box.boxName) {
-        document.getElementById("subheader").innerHTML =
+        subheader.innerHTML =
           "Your starter's name is " + box.boxName + "!<br>Change name below:";
       } else {
-        document.getElementById("subheader").textContent = "Set starter's name below!";
+        subheader.textContent = "Set starter's name below!";
       }
     });
   });
@@ -31,7 +35,7 @@ function initName(user) {
 
   document.getElementById("homeBtn").onclick = () => {
     showView("dashboard");
-    setActiveNav('homeBtn');
+    setActiveNav("homeBtn");
     initDashboard(user);
   };
 }

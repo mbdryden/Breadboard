@@ -23,6 +23,7 @@ function startDashNoCycle(user, currBoxId) {
   document.getElementById("subheader").style.display = "block";
   document.getElementById("navbar").style.display = "block";
   document.getElementById("startCycleBtn").style.display = "block";
+    document.getElementById("stopCycleBtn").style.display = "none";
   setActiveNav('homeBtn');
   onHomeDash = true;
 
@@ -39,12 +40,9 @@ function startDashNoCycle(user, currBoxId) {
     initTemp(user);
   };
   document.getElementById("startCycleBtn").onclick = () => {
-    db.ref("boxes/" + currBoxId).update({
-      cycleInProgress: true,
-      timeLeftInCycle: 25
-    }).then(() => {
-      startDash(user, currBoxId);
-    }).catch(err => alert(err.message));
+    showView("startCycle");
+    onHomeDash = false;
+    initCycle(user);
   };
   document.getElementById("feedBtn").onclick = () => {
     showView("feed");
@@ -70,6 +68,7 @@ function startDash(user, currBoxId) {
   document.getElementById("startCycleBtn").style.display = "none";
   document.getElementById("subheader").style.display = "block";
   document.getElementById("navbar").style.display = "block";
+  document.getElementById("stopCycleBtn").style.display = "block";
   onHomeDash = true;
   setActiveNav('homeBtn');
 
@@ -109,6 +108,19 @@ function startDash(user, currBoxId) {
     setActiveNav('switchBoxBtn');
     onHomeDash = false;
     initSwitchBox(user);
+  };
+  document.getElementById("stopCycleBtn").onclick = () => {
+    db.ref("users/" + user.uid).get().then(userSnap => {
+      const currBoxId = userSnap.val().currBoxId;
+      return db.ref("boxes/" + currBoxId).update({
+        cycleInProgress: false,
+        timeLeftInCycle: null,
+        startCycle: false
+      });
+    }).then(() => {
+      showView("dashboard");
+      initDashboard(user);
+    }).catch(err => alert(err.message));
   };
   document.getElementById("logoutBtn").onclick = () => {
     db.ref("boxes/" + currBoxId).off();

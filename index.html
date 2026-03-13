@@ -47,6 +47,7 @@
   <!-- Dashboard -->
   <div id="view-dashboard" style="display:none;">
     <button id="startCycleBtn">Start New Cycle</button>
+    <button id="stopCycleBtn">Stop Cycle</button>
     <button id="logoutBtn">Logout</button>
   </div>
 
@@ -81,6 +82,15 @@
     <button id="cancelAddBtn">Cancel</button>
   </div>
 
+  <!-- start cycle -->
+  <div id="view-startCycle" style="display:none;">
+    <button id="ratio1Btn">1:1:1</button>
+    <button id="ratio2Btn">1:2:2</button>
+    <button id="ratio5Btn">1:5:5</button>
+    <button id="ratio20Btn">1:20:20</button>
+    <button id="cancelCycleBtn">Cancel</button>
+  </div>
+
   <script src="firebase-init.js" defer></script>
   <script src="router.js" defer></script>
   <script src="views/auth.js" defer></script>
@@ -90,6 +100,7 @@
   <script src="views/feed.js" defer></script>
   <script src="views/switchBox.js" defer></script>
   <script src="views/addBox.js" defer></script>
+  <script src="views/startCycle.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => initAuth());
   </script>
