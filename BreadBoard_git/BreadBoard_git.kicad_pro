@@ -479,14 +479,7 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "unconnected-(J1-Pin_3-Pad3)": [
-        "GND"
-      ],
-      "unconnected-(J2-Pin_2-Pad2)": [
-        "GND"
-      ]
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
