@@ -5,8 +5,7 @@ function initName(user) {
 
     db.ref("boxes/" + currBoxId).get().then(boxSnap => {
       const box = boxSnap.val();
-      document.getElementById("skipNameBtn").textContent = "Cancel";
-      if (box.boxName && box.boxName !== "No Box Name") {
+      if (box.boxName) {
         document.getElementById("subheader").innerHTML =
           "Your starter's name is " + box.boxName + "!<br>Change name below:";
       } else {
