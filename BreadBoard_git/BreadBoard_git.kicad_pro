@@ -479,7 +479,31 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "Net-(U4-3V3)": [
+        "ESP_3V3",
+        "VCC_3V3"
+      ],
+      "Net-(U5-3V3)": [
+        "ESP_3V3",
+        "VCC_3V3"
+      ],
+      "Net-(U6-VDD)": [
+        "ESP_3V3"
+      ],
+      "unconnected-(R16-Pad1)": [
+        "ESP_3V3"
+      ],
+      "unconnected-(R17-Pad1)": [
+        "ESP_3V3"
+      ],
+      "unconnected-(R18-Pad2)": [
+        "ESP_3V3"
+      ],
+      "unconnected-(R20-Pad1)": [
+        "VBUS"
+      ]
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
