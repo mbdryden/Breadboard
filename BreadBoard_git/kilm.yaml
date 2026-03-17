@@ -1,0 +1,11 @@
+capabilities:
+  footprints: true
+  symbols: true
+  templates: true
+created_with: kilm
+description: KiCad component library
+env_var: KICAD_LIB_KICAD_PARTS
+name: kicad-parts
+type: github
+updated_with: kilm
+version: 1.0.0
