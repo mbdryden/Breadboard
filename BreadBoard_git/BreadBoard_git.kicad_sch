@@ -18790,25 +18790,25 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2646cb1b-e3e8-459d-a238-881675d039fb")
 		(property "Reference" "R17"
-			(at 237.49 224.79 90)
+			(at 237.49 227.584 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "CRCW04021K00FKED"
 			(at 237.49 227.33 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RESC1005X40N"
 			(at 237.49 232.918 90)
 			(effects
 				(font
@@ -19185,16 +19185,17 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "CC0805JRNPO9BN120"
 			(at 250.19 219.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:CAP_CC0805_YAG-L"
 			(at 247.3452 222.25 0)
 			(effects
 				(font
@@ -20239,6 +20240,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:CAPC3225X270N"
@@ -20507,7 +20509,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "150"
 			(at 303.53 91.4399 0)
 			(effects
 				(font
@@ -20986,12 +20988,13 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "WE-XHMI_5050"
 			(at 205.74 208.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:WE-XHMI_5050"
@@ -21617,7 +21620,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5c625525-b864-4573-a245-ea7780c700ee")
 		(property "Reference" "C21"
 			(at 275.59 88.8999 0)
@@ -21628,8 +21630,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
-			(at 275.59 91.4399 0)
+		(property "Value" "C0201X5R104K100NTA"
+			(at 263.398 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21637,7 +21639,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RC0603N_YAG-L"
 			(at 272.7452 93.98 0)
 			(effects
 				(font
@@ -21698,13 +21700,14 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "GRM188R60J105KA01D"
 			(at 93.98 237.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:RESC2012X50N"
@@ -21904,13 +21907,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "CRCW0402100KFKED"
 			(at 228.6 222.2499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:RES_CRCW_0402_VIS-L"
@@ -22653,6 +22657,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:CAPC3225X270N"
@@ -22724,6 +22729,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:CAPC1005X55N"
@@ -24222,16 +24228,17 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "GRM31CR61A107MEA8K"
 			(at 265.43 231.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:CAPC3216X190N"
 			(at 262.5852 233.68 0)
 			(effects
 				(font
@@ -24368,6 +24375,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:G-188_MUR-L"
@@ -25559,7 +25567,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c2d67362-d8f3-4d4f-8c4a-8c1c4191a870")
 		(property "Reference" "C22"
 			(at 289.56 88.0109 0)
@@ -25570,8 +25577,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF"
-			(at 289.56 90.5509 0)
+		(property "Value" "GRM188R61A226ME15D"
+			(at 273.558 110.236 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25579,7 +25586,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RC0603N_YAG-L"
 			(at 286.7152 93.98 0)
 			(effects
 				(font
@@ -26241,7 +26248,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d4d928f3-23fe-4459-b7e0-4fb2de3c760c")
 		(property "Reference" "C18"
 			(at 240.03 88.8999 0)
@@ -26252,8 +26258,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100nF"
-			(at 240.03 91.4399 0)
+		(property "Value" "C0201X5R104K100NTA"
+			(at 222.504 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26261,7 +26267,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RC0603N_YAG-L"
 			(at 237.1852 93.98 0)
 			(effects
 				(font
@@ -26690,6 +26696,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:CAPC1005X55N"
@@ -26892,12 +26899,13 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "CRCW0402100KFKED"
 			(at 134.62 237.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "footprints:RES_CRCW_0402_VIS-L"
@@ -27658,7 +27666,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f97b5547-728f-4095-916c-d9731a0f951d")
 		(property "Reference" "C16"
 			(at 224.79 89.2809 0)
@@ -27669,8 +27676,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
-			(at 224.79 91.8209 0)
+		(property "Value" "GRM155R61A106ME11D"
+			(at 194.818 93.472 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27678,7 +27685,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RC0603N_YAG-L"
 			(at 221.9452 95.25 0)
 			(effects
 				(font
@@ -27849,16 +27856,17 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "RC0603FR-0724K9L"
 			(at 228.6 241.2999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RC0603N_YAG-L"
 			(at 224.282 240.03 90)
 			(effects
 				(font
