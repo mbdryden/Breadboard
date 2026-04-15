@@ -4,7 +4,6 @@ function initAuth() {
       if (e.key === "Enter") document.getElementById("loginBtn").click();
     });
   });
-
   ["newBoxId", "newEmail", "newPassword", "confirmPassword"].forEach(id => {
     document.getElementById(id).addEventListener("keydown", (e) => {
       if (e.key === "Enter") document.getElementById("signupBtn").click();
@@ -27,7 +26,6 @@ function initAuth() {
     const password = document.getElementById("newPassword").value;
     const confirm = document.getElementById("confirmPassword").value;
     if (password !== confirm) { alert("Passwords do not match"); return; }
-
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(userCredential => {
         const user = userCredential.user;

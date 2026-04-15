@@ -8,13 +8,13 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav id="navbar" style="display:none;">
     <ul>
-      <!-- Dashboard buttons -->
       <li id="nav-home"><a href="#" id="homeBtn"><img src="icons/home.png" alt="Home" /></a></li>
       <li id="nav-switchBox"><a href="#" id="switchBoxBtn"><img src="icons/switch.png" alt="Switch Boxes" /></a></li>
       <li style="float:right" id="nav-changeName"><a href="#" id="changeNameBtn"><img src="icons/name.png" alt="Change Name" /></a></li>
@@ -45,10 +45,44 @@
   </div>
 
   <!-- Dashboard -->
+    <div id="temp-chart-container" style="display:none;">
+      <div style="display:flex; gap:1rem;">
+        
+        <!-- temp -->
+        <div style="flex:1;">
+          <p style="font-size: 13px; color: #996633; margin: 0 0 8px;">temperature log</p>
+          <div style="position: relative; width: 100%; height: 220px;">
+            <canvas id="tempChart"></canvas>
+          </div>
+          <div id="tempLegend" style="display:flex; gap:16px; margin-top:10px; font-size:12px; color:#996633;">
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#5C633E;margin-right:4px;"></span>within ±1°F</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#D39932;margin-right:4px;"></span>±1–3°F</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#AE5228;margin-right:4px;"></span>&gt;3°F off</span>
+          </div>
+        </div>
+
+        <!-- humidity -->
+        <div style="flex:1;">
+          <p style="font-size: 13px; color: #996633; margin: 0 0 8px;">humidity log</p>
+          <div style="position: relative; width: 100%; height: 220px;">
+            <canvas id="humidityChart"></canvas>
+          </div>
+          <div id="humidityLegend" style="display:flex; gap:16px; margin-top:10px; font-size:12px; color:#996633;">
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#5C633E;margin-right:4px;"></span>within ±2%</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#D39932;margin-right:4px;"></span>±2–8%</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#AE5228;margin-right:4px;"></span>&gt;8% off</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   <div id="view-dashboard" style="display:none;">
+    <!-- Buttons -->
     <button id="startCycleBtn">Start New Cycle</button>
     <button id="stopCycleBtn">Stop Cycle</button>
     <button id="logoutBtn">Logout</button>
+
   </div>
 
   <!-- Name -->
@@ -101,6 +135,7 @@
   <script src="views/switchBox.js" defer></script>
   <script src="views/addBox.js" defer></script>
   <script src="views/startCycle.js" defer></script>
+  <script src="views/charts.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => initAuth());
   </script>

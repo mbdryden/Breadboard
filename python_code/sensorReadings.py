@@ -13,4 +13,4 @@ sht.mode = adafruit_sht4x.Mode.NOHEAT_HIGHPRECISION
 def values():
     tempC, humidity = sht.measurements
     tempF = (tempC *9 /5)+32
-    return tempF, humidity
+    return tempF, humidity 

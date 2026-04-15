@@ -1,31 +1,34 @@
 const functions = require("firebase-functions/v1");
 const admin = require("firebase-admin");
+
 admin.initializeApp();
 
-exports.startCycle = functions.database
-    .ref("boxes/{boxId}/startCycle")
-    .onWrite(async (change, context) => {
-        const isNowOn = change.after.val();
-        if (!isNowOn) return null;
+// Trigger when startCycle is turned on
+exports.onCycleStart = functions.database
+  .ref("boxes/{boxId}/startCycle")
+  .onWrite(async (change, context) => {
+    const isNowOn = change.after.val();
 
-        const boxId = context.params.boxId;
-        const db = admin.database();
+    // Only run when startCycle becomes true
+    if (!isNowOn) return null;
 
-        const snap = await db.ref("boxes/" + boxId + "/timeLeftInCycle").get();
-        const totalSeconds = snap.val();
+    const boxId = context.params.boxId;
+    const db = admin.database();
 
-        await db.ref("boxes/" + boxId).update({ cycleInProgress: true, startCycle: null });
+    try {
+      // ✅ DO NOT touch cycleEndTime here
+      // Let frontend fully control timing
 
-        for (let timeLeft = totalSeconds; timeLeft >= 0; timeLeft -= 5) {
-            await new Promise((resolve) => setTimeout(resolve, 5000));
+      await db.ref("boxes/" + boxId).update({
+        cycleInProgress: true,
+        startCycle: null // reset trigger
+      });
 
-            const cycleSnap = await db.ref("boxes/" + boxId + "/cycleInProgress").get();
-            if (!cycleSnap.val()) return null;
+      console.log(`Cycle started for box ${boxId}`);
 
-            const updates = { timeLeftInCycle: timeLeft };
-            if (timeLeft === 0) updates.cycleInProgress = false;
+    } catch (err) {
+      console.error("Error starting cycle:", err);
+    }
 
-            await db.ref("boxes/" + boxId).update(updates);
-        }
-        return null;
-    });
+    return null;
+  });
