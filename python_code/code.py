@@ -6,6 +6,7 @@ import controls_logic as ctrl
 smpPeriod= 40
 last_time= time.monotonic()
 
+#Have a check here instead of while True for while cycle running...
 while True: 
     #For just testing temp/humidity readings
     '''
