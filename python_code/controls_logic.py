@@ -2,7 +2,6 @@ import board
 import pwmio
 import sensorReadings as sensor
 
-
 #Global vals
 DEFAULT_LOW= 70
 DEFAULT_HIGH= 100
