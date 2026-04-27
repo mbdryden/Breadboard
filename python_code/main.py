@@ -47,8 +47,12 @@ display.txt_write("TEMP / HUMIDITY / HEATER")
 
 DEFAULT_LOW= 70
 DEFAULT_HIGH= 100
+low_temp=DEFAULT_LOW
+high_temp=DEFAULT_HIGH
+setpoint = (low_temp + high_temp) / 2
+#user temp variable
+tempSet= False
 
-USER_RANGE= None
 KP= 0.2
 KI= 0.0002
 KD= 0.02
@@ -69,14 +73,6 @@ I = 0
 prev_error = 0
 duty = 0
 
-#move to detect user input
-if USER_RANGE is None:
-    low_temp = DEFAULT_LOW
-    high_temp = DEFAULT_HIGH
-else:
-    low_temp, high_temp = USER_RANGE
-
-setpoint = (low_temp + high_temp) / 2
 cycleStart = False
 
 print("Control subsystem init")
@@ -192,6 +188,22 @@ while True:
             print("Data received:")
             txt = json.loads(response.text)
             cycleStart = txt.get('cycleInProgress')
+            #check user temp --> Jordan
+            tempSet= txt.get("tempSet",False)
+            if tempSet:
+                ideal_temp=txt.get("idealTemp")
+                if ideal_temp is not None:
+                    ideal_temp=float(ideal_temp)
+                    setpoint =ideal_temp
+                    low_temp=ideal_temp -5
+                    high_temp=ideal_temp +5
+                    print("User temp from firebase:",ideal_temp)
+            else:
+                print("Default temp range")
+            #just for checking -- can delete later
+            print("Temp set:", tempSet)
+            print("Range:", low_temp,"-",high_temp)
+            print("Setpoint:", setpoint)
     except Exception as e:
         print("Read failed:", e)
 
