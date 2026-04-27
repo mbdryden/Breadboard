@@ -146,7 +146,14 @@ def control_step(dt):
     
     pwm1.duty_cycle = int(duty * 65535)
     pwm2.duty_cycle = int(duty * 65535)
-    print(f"T={tempF:.1f}F  RH={humidity:.1f}%  "f"Range[{low_temp},{high_temp}]  "f"Duty={duty*100:.1f}%")
+    #for screenshot --> time stamp and mode added
+    current_time= time.monotonic()-start_time
+    mode= "USER" if tempSet else "DEFAULT"
+    print(f"[{current_time:6.2f}s] [{mode}] "
+      f"T={tempF:.1f}F RH={humidity:.1f}% "
+      f"Range[{low_temp},{high_temp}] "
+      f"Duty={duty*100:.1f}%")
+    #print(f"T={tempF:.1f}F  RH={humidity:.1f}%  "f"Range[{low_temp},{high_temp}]  "f"Duty={duty*100:.1f}%")
 
 def update_display(temp_f, humidity, heater_on):
 
@@ -181,6 +188,7 @@ last_temp = None
 last_humi = None
 last_heater = None
 last_time = time.monotonic()
+start_time=time.monotonic()
 while True:
     try:
         with requests.get(read_url) as response:
