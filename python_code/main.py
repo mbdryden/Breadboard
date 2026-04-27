@@ -53,13 +53,17 @@ KP= 0.2
 KI= 0.0002
 KD= 0.02
 
-PWM_PIN= board.D27
-PWM_FREQ= 1000
+PWM_PIN_1= board.D27
+PWM_PIN_2=board.D12
 
+PWM_FREQ= 1000
+PWM_CAP=0.80
 DUTY_MIN=0
 DUTY_MAX=1
 SAFETY_MARGIN= 4
-pwm = pwmio.PWMOut(PWM_PIN, frequency=PWM_FREQ, duty_cycle=0)
+
+pwm1 = pwmio.PWMOut(PWM_PIN_1, frequency=PWM_FREQ, duty_cycle=0)
+pwm2 = pwmio.PWMOut(PWM_PIN_2,frequency=PWM_FREQ,duty_cycle=0)
 
 I = 0
 prev_error = 0
@@ -139,7 +143,13 @@ def control_step(dt):
     else:
         error = setpoint - tempF
         duty = compute_pid(error, dt)
-    pwm.duty_cycle = int(duty * 65535)
+    
+    #Cap duty to 80
+    if duty > PWM_CAP:
+        duty=PWM_CAP    
+    
+    pwm1.duty_cycle = int(duty * 65535)
+    pwm2.duty_cycle = int(duty * 65535)
     print(f"T={tempF:.1f}F  RH={humidity:.1f}%  "f"Range[{low_temp},{high_temp}]  "f"Duty={duty*100:.1f}%")
 
 def update_display(temp_f, humidity, heater_on):
@@ -235,5 +245,7 @@ while True:
              
             time.sleep(0.05)
     finally:
-        pwm.duty_cycle=0
+        #set both heaters to 0
+        pwm1.duty_cycle=0
+        pwm2.duty_cycle=0
     
