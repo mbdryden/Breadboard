@@ -225,6 +225,7 @@ while True:
             now = time.monotonic()
             if now - last_control_time >= 1.0:
                 dt = now - last_time
+                last_control_time=now
                 last_time = now
                 control_step(dt)
                 temp, humi = values()
