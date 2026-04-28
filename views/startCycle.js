@@ -1,5 +1,6 @@
 const peakTimes = [ // in seconds
 //  [64-68], [68-72], [72-75], [75-79], [79-82]
+    [120, 120, 120, 120, 120], // TESTING
     [25200, 21600, 18000, 14400, 10800], // 1:1:1
     [28800, 25200, 18000, 14400, 14400], // 1:2:2
     [39600, 36000, 32400, 28800, 25200], // 1:5:5
@@ -59,10 +60,11 @@ function initCycle(user) {
   };
 
   // Ratio buttons
-  document.getElementById("ratio1Btn").onclick = () => startWithTime(0);
-  document.getElementById("ratio2Btn").onclick = () => startWithTime(1);
-  document.getElementById("ratio5Btn").onclick = () => startWithTime(2);
-  document.getElementById("ratio20Btn").onclick = () => startWithTime(3);
+  document.getElementById("testBtn").onclick = () => startWithTime(0);
+  document.getElementById("ratio1Btn").onclick = () => startWithTime(1);
+  document.getElementById("ratio2Btn").onclick = () => startWithTime(2);
+  document.getElementById("ratio5Btn").onclick = () => startWithTime(3);
+  document.getElementById("ratio20Btn").onclick = () => startWithTime(4);
 
   // Stop cycle
   document.getElementById("stopCycleBtn").onclick = () => {
