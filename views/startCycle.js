@@ -43,6 +43,9 @@ function initCycle(user) {
         // ✅ NEW: absolute timing system
         const now = Date.now();
         const cycleEndTime = now + seconds * 1000;
+        console.log("temp:", temp);
+        console.log("time:", now);
+        console.log("seconds:", seconds);
         console.log("SETTING cycleEndTime:", cycleEndTime);
 
         return db.ref("boxes/" + boxSnap.key).update({

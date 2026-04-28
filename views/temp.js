@@ -22,7 +22,15 @@ function initTemp(user) {
   };
 
   document.getElementById("setTempBtn").onclick = () => {
-    const idealTemp = document.getElementById("idealTempInput").value;
+    const idealTemp = Number(document.getElementById("idealTempInput").value);
+    if(idealTemp < 64 || idealTemp > 82) {
+      alert("Temperature must be between 64-82° F.");
+      return;
+    }
+    if(Math.floor(idealTemp) != idealTemp) {
+      alert("Temperature must be whole number.");
+      return;
+    }
     db.ref("users/" + user.uid).get().then(userSnap => {
       const currBoxId = userSnap.val().currBoxId;
       return db.ref("boxes/" + currBoxId).update({
