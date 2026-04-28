@@ -61,7 +61,7 @@ PWM_PIN_1= board.D27
 PWM_PIN_2=board.D12
 
 PWM_FREQ= 1000
-PWM_CAP=0.50
+PWM_CAP=0.30
 DUTY_MIN=0
 DUTY_MAX=1
 SAFETY_MARGIN= 4
@@ -140,7 +140,7 @@ def control_step(dt):
         error = setpoint - tempF
         duty = compute_pid(error, dt)
     
-    #Cap duty to 50
+    #Cap duty to 30
     if duty > PWM_CAP:
         duty=PWM_CAP    
     
