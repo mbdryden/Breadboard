@@ -24,7 +24,7 @@ function initCycle(user) {
       .then(boxSnap => {
         const box = boxSnap.val();
 
-        let temp = 64;
+        let temp = box.idealTemp;
 
         let seconds;
 
