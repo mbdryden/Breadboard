@@ -60,8 +60,8 @@ KD= 0.02
 PWM_PIN_1= board.D27
 PWM_PIN_2=board.D12
 
-PWM_FREQ= 1000
-PWM_CAP=0.20
+PWM_FREQ= 5
+PWM_CAP=0.10
 DUTY_MIN=0
 DUTY_MAX=1
 SAFETY_MARGIN= 4
@@ -223,7 +223,7 @@ while True:
         while cycleStart:
             #For testing controls logic portion 
             now = time.monotonic()
-            if now - last_control_time >= 1.0:
+            if now - last_control_time >= 5.0:
                 dt = now - last_time
                 last_control_time=now
                 last_time = now
@@ -231,7 +231,7 @@ while True:
                 temp, humi = values()
                 heater_on = duty > 0.01
 
-            if now - last_display_time >= 1.0:
+            if now - last_display_time >= 5.0:
                 last_display_time = now
 
                 update_display(temp, humi, heater_on)
@@ -267,6 +267,7 @@ while True:
             time.sleep(0.05)
     finally:
         #set both heaters to 0
+        print("Cycle Done")
         pwm1.duty_cycle=0
         pwm2.duty_cycle=0
     
