@@ -30,7 +30,7 @@ h2 {
   font-size: 30px;
   color: #996633;
 }
-#view-login, #view-signup, #view-name, #view-temp, #view-dashboard, #view-switchBox, #view-addBox, #view-feed, #view-startCycle {
+#view-login, #view-signup, #view-name, #view-temp, #view-dashboard, #view-switchBox, #view-addBox, #view-feed, #view-startCycle, #view-results {
   max-width: 400px;
   margin: 40px auto;
   background: #CAB592;
@@ -108,7 +108,7 @@ nav li a.active {
   font-weight: bold;
   margin-bottom: 8px;
 }
-#logoutBtn, #cancelCycleBtn, #addBoxBtn {
+#logoutBtn, #cancelCycleBtn, #addBoxBtn, #ackBtn {
   background: #E3D8C6;
   color: #996633;
   margin-top: 20px;
