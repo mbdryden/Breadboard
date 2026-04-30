@@ -15,7 +15,7 @@ async function initDashboard(user) {
     .once("value");
 
   const log = snap.val() ? Object.values(snap.val()) : [];
-  renderChart(log, idealTemp, 100);
+  renderChart(log, idealTemp, 50);
 
   const boxSnap = await db.ref("boxes/" + currBoxId).get();
   const box = boxSnap.val();
@@ -108,6 +108,7 @@ function startDash(user, currBoxId) {
       } else {
         document.getElementById("subheader").textContent = `${name} has peaked!`;
         clearInterval(countdownInterval);
+
       }
     }
 

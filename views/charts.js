@@ -17,8 +17,8 @@ function renderChart(tempLog, idealTemp, idealHumidity) {
 
   const humidColors = humids.map(h => {
     const diff = Math.abs(h - idealHumidity);
-    if (diff <= 2)  return '#5C633E';
-    if (diff <= 8)  return '#D39932';
+    if (diff <= 10)  return '#5C633E';
+    if (diff <= 20)  return '#D39932';
     return '#AE5228';
   });
 
