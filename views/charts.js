@@ -3,8 +3,9 @@ let humidChartInstance = null;
 
 function renderChart(tempLog, idealTemp, idealHumidity) {
   const labels = tempLog.map(e =>
-    new Date(e.logTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC' })
+    new Date(e.logTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false})
   );
+
   const temps  = tempLog.map(e => e.temp);
   const humids = tempLog.map(e => e.humdi);
 
