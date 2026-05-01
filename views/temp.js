@@ -23,8 +23,8 @@ function initTemp(user) {
 
   document.getElementById("setTempBtn").onclick = () => {
     const idealTemp = Number(document.getElementById("idealTempInput").value);
-    if(idealTemp < 64 || idealTemp > 82) {
-      alert("Temperature must be between 64-82° F.");
+    if(idealTemp < 64 || idealTemp > 120) {
+      alert("Temperature must be between 64-120° F.");
       return;
     }
     if(Math.floor(idealTemp) != idealTemp) {

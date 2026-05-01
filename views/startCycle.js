@@ -36,7 +36,7 @@ function initCycle(user) {
           seconds = peakTimes[ratio][2];
         } else if (temp >= 75 && temp < 79) {
           seconds = peakTimes[ratio][3];
-        } else if (temp >= 79 && temp <= 82) {
+        } else if (temp >= 79 && temp <= 120) {
           seconds = peakTimes[ratio][4];
         }
 
