@@ -10,7 +10,7 @@ function initSwitchBox(user) {
     boxIds.filter(boxId => boxId !== currBoxId).forEach(boxId => {
       db.ref("boxes/" + boxId).get().then(boxSnap => {
         const box = boxSnap.val();
-        const name = box.boxName && box.boxName !== "No Box Name" ? box.boxName : boxId;
+        const name = (box.boxName && box.boxName !== "No Box Name") ? box.boxName : boxId;
 
         const container = document.createElement("div");
         container.className = "box-row";

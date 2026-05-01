@@ -116,7 +116,9 @@ function startDash(user, currBoxId) {
           const currBoxId = userSnap.val().currBoxId;
           return db.ref("boxes/" + currBoxId).update({
             seenResults: false,
-            cycleInProgress: false
+            cycleInProgress: false,
+            startTime: null,
+            cycleEndTime: null
           });
         }).then(() => {
           clearInterval(countdownInterval);

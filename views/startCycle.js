@@ -24,7 +24,7 @@ function initCycle(user) {
       .then(boxSnap => {
         const box = boxSnap.val();
 
-        let temp = box.idealTemp;
+        let temp = box.idealTemp ? box.idealTemp : 80;
 
         let seconds;
 
@@ -43,16 +43,11 @@ function initCycle(user) {
         // ✅ NEW: absolute timing system
         const now = Date.now();
         const cycleEndTime = now + seconds * 1000;
-        console.log("temp:", temp);
-        console.log("time:", now);
-        console.log("seconds:", seconds);
-        console.log("SETTING cycleEndTime:", cycleEndTime);
 
         return db.ref("boxes/" + boxSnap.key).update({
           cycleEndTime: cycleEndTime,
           startTime: now,
-          cycleInProgress: true,
-          startCycle: true
+          cycleInProgress: true
         });
       })
       .then(() => {
