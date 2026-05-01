@@ -119,7 +119,7 @@ function startDash(user, currBoxId) {
           });
         }).then(() => {
           clearInterval(countdownInterval);
-          initDashboard(user); // ✅ fixed: pass user
+          initDashboard(user);
         });
       }
     }
@@ -128,7 +128,6 @@ function startDash(user, currBoxId) {
     countdownInterval = setInterval(updateDisplay, 1000);
   });
 
-  // ✅ fixed: button handlers inside startDash
   document.getElementById("changeNameBtn").onclick = () => {
     if (countdownInterval) clearInterval(countdownInterval);
     document.getElementById("temp-chart-container").style.display = "none";
@@ -202,7 +201,7 @@ function startDashResults(user, currBoxId) {
   setActiveNav('homeBtn');
   if (countdownInterval) clearInterval(countdownInterval);
 
-  const subheader = document.getElementById("subheader"); // ✅ define it once here
+  const subheader = document.getElementById("subheader");
 
   db.ref("boxes/" + currBoxId).on("value", snap => {
     const box = snap.val();
@@ -266,16 +265,27 @@ function startDashResults(user, currBoxId) {
   };
   document.getElementById("ackBtn").onclick = () => {
     if (countdownInterval) clearInterval(countdownInterval);
-    db.ref("boxes/" + currBoxId).off(); // ✅ stop listener before navigating
+    db.ref("boxes/" + currBoxId).off();
     db.ref("users/" + user.uid).get().then(userSnap => {
       const currBoxId = userSnap.val().currBoxId;
-      return db.ref("boxes/" + currBoxId).update({
-        seenResults: true
-      });
+      return db.ref("boxes/" + currBoxId).update({ seenResults: true });
+    // UNCOMMENT TO DELETE OLD LOGS
+    // }).then(() => {
+    //   return db.ref("logs")
+    //     .orderByChild("boxID")
+    //     .equalTo(Number(currBoxId))
+    //     .once("value");
+    // }).then(snap => {
+    //   const updates = {};
+    //   snap.forEach(child => {
+    //     updates[child.key] = null;
+    //   });
+    //   return db.ref("logs").update(updates); 
     }).then(() => {
+      console.log("logs deleted");
       document.getElementById("temp-chart-container").style.display = "none";
       showView("dashboard");
-      startDashNoCycle(user, currBoxId);
+      startDashNoCycle(user, currBoxId); 
     }).catch(err => alert(err.message));
   };
 
@@ -303,7 +313,7 @@ function startDashResults(user, currBoxId) {
     ctx.fillStyle = "#996633";
     ctx.font = "18px canela";
     ctx.textAlign = "center";
-    ctx.fillText(subheader.textContent, combined.width / 2, padding + 20); // ✅ uses same subheader var
+    ctx.fillText(subheader.textContent, combined.width / 2, padding + 20);
 
     let y = padding + textHeight;
     chartCanvases.forEach(canvas => {

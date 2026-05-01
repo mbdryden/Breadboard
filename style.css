@@ -108,9 +108,14 @@ nav li a.active {
   font-weight: bold;
   margin-bottom: 8px;
 }
-#logoutBtn, #cancelCycleBtn, #addBoxBtn, #ackBtn {
+#logoutBtn, #cancelCycleBtn, #addBoxBtn {
   background: #E3D8C6;
   color: #996633;
+  margin-top: 20px;
+}
+#downloadBtn {
+  background: #D39932;
+  color: #E3D8C6;
   margin-top: 20px;
 }
 button.removeBtn {
