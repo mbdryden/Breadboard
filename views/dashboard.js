@@ -5,7 +5,10 @@ async function initDashboard(user) {
   const userSnap = await db.ref("users/" + user.uid).get();
   const userData = userSnap.val();
   const currBoxId = userData.currBoxId;
-  const idealTemp = userData.idealTemp ?? 75;
+  const boxSnap = await db.ref("boxes/" + currBoxId).get();
+  const box = boxSnap.val();
+  const idealTemp = box.idealTemp ? box.idealTemp : 80;
+  console.log(idealTemp);
 
   document.getElementById("header").textContent = "welcome!";
 
@@ -17,8 +20,6 @@ async function initDashboard(user) {
   const log = snap.val() ? Object.values(snap.val()) : [];
   renderChart(log, idealTemp, 50);
 
-  const boxSnap = await db.ref("boxes/" + currBoxId).get();
-  const box = boxSnap.val();
   if (box.cycleInProgress) {
     startDash(user, currBoxId);
   } else {
