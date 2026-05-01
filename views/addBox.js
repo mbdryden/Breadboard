@@ -15,10 +15,14 @@ function initAddBox(user) {
         : db.ref("boxes/" + newBoxId).set({
             boxId: newBoxId,
             tempSet: false,
+            idealTemp: 80,
             cycleInProgress: false,
             lastFed: null,
             boxName: null,
-            timeLeftInCycle: null
+            timeLeftInCycle: null,
+            startTime: null,
+            cycleEndTime: null,
+            seenResults: true
           });
 
       return boxWrite.then(() => {

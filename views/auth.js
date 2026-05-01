@@ -35,6 +35,7 @@ function initAuth() {
             : db.ref("boxes/" + boxId).set({
                 boxId: boxId,
                 tempSet: false,
+                idealTemp: 80,
                 cycleInProgress: false,
                 lastFed: null,
                 boxName: "No Box Name",
